@@ -12,10 +12,19 @@
 }
 .nav-logo {
     width:120px;
-    height:60px;
-    display:flex;
-    align-items:center;
+    height:50px;
 }
-.nav-logo img {
+.logo {
+    background-image:url("assets/images/amazon-logo.png");
+    background-size:contain;
+    background-repeat:no-repeat;
+    background-position:center;
+    height: 50px;
     width:100%;
+}
+.border{
+    border:1.5px solid transparent;
+}
+.border:hover{
+    border:1.5px solid white;
 }
