@@ -1,0 +1,21 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+.navbar { 
+    display:flex;
+    height:60px;
+    background-color:#131921;
+    color:white;
+    align-items:center;
+}
+.nav-logo {
+    width:120px;
+    height:60px;
+    display:flex;
+    align-items:center;
+}
+.nav-logo img {
+    width:100%;
+}
