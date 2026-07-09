@@ -14,17 +14,33 @@
     width:120px;
     height:50px;
 }
-.logo {
-    background-image:url("assets/images/amazon-logo.png");
-    background-size:contain;
-    background-repeat:no-repeat;
-    background-position:center;
-    height: 50px;
-    width:100%;
+.logo-text {
+    font-size:28px;
+    font-weight: bold;
+    color:white;
+    display:flex;
+    align-items:center;
+    height: 100%;
+    justify-content: center;
+
 }
 .border{
     border:1.5px solid transparent;
 }
 .border:hover{
     border:1.5px solid white;
+}
+
+.nav-address {
+    padding: 8px;
+}
+
+.add-first{
+    color: #cccccc;
+    font-size: 0.75rem;
+}
+.add-second{
+    color: white;
+    font-size: 0.875rem;
+    font-weight: bold;
 }
