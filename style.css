@@ -8,11 +8,13 @@
     height:60px;
     background-color:#131921;
     color:white;
-    align-items:center;
+   
 }
 .nav-logo {
     width:120px;
-    height:50px;
+    height:60px;
+    display:flex;
+    align-items:center;
 }
 .logo-text {
     font-size:28px;
@@ -32,7 +34,10 @@
 }
 
 .nav-address {
-    padding: 8px;
+    padding: 0 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .add-first{
@@ -49,9 +54,10 @@
     border: 2px solid transparent; 
     display:flex;
     flex-grow: 1;
-    height: 40px;
+    height: 42px;
     margin: 0 10px;
-
+    align-self: center;
+    
 }
 
 .search-select {
@@ -70,7 +76,9 @@
     padding-left: 10px;
     font-size: 1rem;
 }
-
+.search-input::placeholder{
+    color:#6b6b6b;
+}
 .search-button {
     width: 45px;
     border: none;
@@ -87,9 +95,10 @@
 .nav-language {
     display:flex;
     align-items:center;
-    padding: 8px 10px;
+    padding: 0 10px;
     cursor: pointer;
-    gap:5px;
+    gap:6px;
+    justify-content: center;
 }
 .lang-icon {
     font-size: 1.5rem;
@@ -121,9 +130,33 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 8px 10px;
+    padding: 0 10px;
     cursor: pointer;
 }
 .nav-small {
     font-size: 0.75rem;
+}
+.nav-cart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10px;
+    gap: 5px;
+    cursor: pointer;
+}
+.cart-text {
+    font-size: 0.875rem;
+    font-weight: bold;
+
+    
+}
+.nav-cart i {
+    font-size: 1.5rem;
+}
+
+
+.nav-box {
+    height: 60px;
+    display: flex;
+    align-items: center;
 }
