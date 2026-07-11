@@ -46,11 +46,12 @@
 }
 
 .nav-search {
+    border: 2px solid transparent; 
     display:flex;
     flex-grow: 1;
     height: 40px;
-    margin-left: 10px;
-    margin-right: 10px;
+    margin: 0 10px;
+
 }
 
 .search-select {
@@ -60,6 +61,7 @@
     border-bottom-left-radius: 4px;
     text-align: center;
     background-color: #f3f3f3;
+    cursor: pointer;
 }
 
 .search-input {
@@ -77,4 +79,8 @@
     border-bottom-right-radius: 4px;
     font-size: 1.2rem;
     cursor: pointer;
+}
+.nav-search:hover {
+    border-color: orange;
+    
 }
