@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Amazon India Clone</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
+
 <body>
     <!--Navbar Starts-->
     <div class="navbar">
@@ -35,28 +38,52 @@
             <input type="text" class="search-input" placeholder="Search Amazon.in">
 
             <button class="search-button">
-                🔍
+                <i class="fa-solid fa-magnifying-glass"></i>
             </button>
         </div>
-        
-        <div class="nav-language">
-            Language
-        </div>
-        
-        <div class="nav-signin">
-            Sign In
+
+        <div class="nav-language border">
+            <span class="lang-icon">
+                🇮🇳
+            </span>
+            <span class="lang-text">EN</span>
+            <span class="lang-dropdown">
+                <i class="fa-solid fa-caret-down"></i>
+
         </div>
 
-        <div class="nav-orders">
-            Returns & Orders
+        <div class="nav-item border">
+
+            <p class="nav-small">
+                Hello, Sign in
+            </p>
+
+            <p class="nav-large">
+                <span>Account & Lists</span>
+                <i class="fa-solid fa-caret-down"></i>
+            </p>
+
+        </div>
+
+        <div class="nav-item border">
+
+            <p class="nav-small">
+                Returns
+            </p>
+
+            <p class="nav-large">
+                & Orders
+            </p>
+
         </div>
 
         <div class="nav-cart">
             Cart
-        </div>    
+        </div>
 
-                     
+
     </div>
     <!-- Navbar Ends -->
 </body>
+
 </html>
