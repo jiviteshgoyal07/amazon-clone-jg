@@ -146,21 +146,34 @@
 
     <!-- Hero Wrapper Starts -->
     <div class="hero-wrapper">
-
         <div class="hero-section">
-
-            <img src="assets/images/hero-toys.webp" alt="Amazon Hero Banner" class="hero-image">
-
-            <button class="hero-left">
+            <div class="hero-slider" id="hero-slider">
+                <div class="hero-slide" id="last-clone">
+                    <img src="assets/images/hero-toys.webp" class="hero-image">
+                </div>
+                <div class="hero-slide">
+                    <img src="assets/images/hero-gaming.webp" class="hero-image">
+                </div>
+                <div class="hero-slide">
+                    <img src="assets/images/hero-kitchen.webp" class="hero-image">
+                </div>
+                <div class="hero-slide">
+                    <img src="assets/images/hero-school.webp" class="hero-image">
+                </div>
+                <div class="hero-slide">
+                    <img src="assets/images/hero-toys.webp" class="hero-image">
+                </div>
+                <div class="hero-slide" id="first-clone">
+                    <img src="assets/images/hero-gaming.webp" class="hero-image">
+                </div>
+            </div>
+            <button id="hero-left" class="hero-left">
                 <i class="fa-solid fa-chevron-left"></i>
             </button>
-
-            <button class="hero-right">
+            <button id="hero-right" class="hero-right">
                 <i class="fa-solid fa-chevron-right"></i>
             </button>
-
         </div>
-
     </div>
     <div class="hero-message">
         <p>
@@ -454,37 +467,7 @@
     <!-- Shop Section Ends here -->
 
     <!-- Product Slider Starts -->
-
-    <section class="product-slider">
-        <div class="slider-header">
-            <h2>Best Sellers in Electronics</h2>
-            <a href="#">See more</a>
-        </div>
-
-        <button class="slider-btn slider-left" id="electronics-left">
-            &#10094;
-        </button>
-
-        <div class="slider-track" id="electronics-slider">
-
-            <img src="assets/images/electronics-laptop.jpg" alt="">
-            <img src="assets/images/electronics-smartphone.jpg" alt="">
-            <img src="assets/images/electronics-smartwatch.jpg" alt="">
-            <img src="assets/images/electronics-earbuds.jpg" alt="">
-            <img src="assets/images/gaming-controller.jpg" alt="">
-            <img src="assets/images/gaming-headset.jpg" alt="">
-            <img src="assets/images/gaming-keyboard.jpg" alt="">
-            <img src="assets/images/gaming-mouse.jpg" alt="">
-
-        </div>
-
-        <button class="slider-btn slider-right" id="electronics-right">
-            &#10095;
-        </button>
-
-    </section>
-
-    <section class="product-slider">
+     <section class="product-slider">
         <div class="slider-header">
             <h2>Popular items this season</h2>
             <a href="#">See more</a>
@@ -513,6 +496,35 @@
         </div>
 
         <button class="slider-btn slider-right" id="popular-right">
+            &#10095;
+        </button>
+
+    </section>
+
+    <section class="product-slider">
+        <div class="slider-header">
+            <h2>Best Sellers in Electronics</h2>
+            <a href="#">See more</a>
+        </div>
+
+        <button class="slider-btn slider-left" id="electronics-left">
+            &#10094;
+        </button>
+
+        <div class="slider-track" id="electronics-slider">
+
+            <img src="assets/images/electronics-laptop.jpg" alt="">
+            <img src="assets/images/electronics-smartphone.jpg" alt="">
+            <img src="assets/images/electronics-smartwatch.jpg" alt="">
+            <img src="assets/images/electronics-earbuds.jpg" alt="">
+            <img src="assets/images/gaming-controller.jpg" alt="">
+            <img src="assets/images/gaming-headset.jpg" alt="">
+            <img src="assets/images/gaming-keyboard.jpg" alt="">
+            <img src="assets/images/gaming-mouse.jpg" alt="">
+
+        </div>
+
+        <button class="slider-btn slider-right" id="electronics-right">
             &#10095;
         </button>
 
@@ -646,7 +658,7 @@
                 </a>
 
                 <a href="#" class="box-item">
-                   <img src="assets/images/carousel/boxes/boys.jpg" alt="">
+                    <img src="assets/images/carousel/boxes/boys.jpg" alt="">
                     <p>Boys</p>
                 </a>
 

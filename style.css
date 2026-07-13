@@ -8,7 +8,7 @@ body {
     padding: 0;
     box-sizing: border-box;
 }
-
+/*           NAVBAR            */
 .navbar {
     display: flex;
     height: 60px;
@@ -185,7 +185,8 @@ body {
     display: flex;
     align-items: center;
 }
-
+/*          NAVBAR           */
+/*            PANEL          */
 .panel {
     height: 40px;
     background-color: #232f3e;
@@ -228,108 +229,91 @@ body {
 .panel-option i {
     font-size: 0.7rem;
 }
-
-.hero-wrapper {
-    background: #eaeded;
-    position: relative;
-    z-index: 1;
+/*==========PANEL===========*/
+/*======HERO SECTION========*/
+.hero-wrapper{
+    background:#eaeded;
+    position:relative;
 }
-
-.hero-section {
-    position: relative;
-    height: 320px;
-    overflow: hidden;
+.hero-section{
+    position:relative;
+    height:320px;
+    overflow:hidden;
 }
-
-.hero-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center top;
-    display: block;
+.hero-slider{
+    display:flex;
+    height:100%;
+    transition:transform .45s ease;
 }
-
+.hero-slide{
+    min-width:100%;
+    height:100%;
+}
+.hero-image{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    object-position:center top;
+    display:block;
+}
 .hero-left,
-.hero-right {
-
-    position: absolute;
-    top: 0;
-
-    width: 55px;
-    height: 300px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    background: transparent;
-    border: none;
-
-    cursor: pointer;
-
-    font-size: 2.8rem;
-    font-weight: 300;
-    color: #111;
-
-    z-index: 50;
+.hero-right{
+    position:absolute;
+    top:0;
+    width:55px;
+    height:300px;
+    border:none;
+    background:transparent;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    cursor:pointer;
+    color:#111;
+    font-size:2.5rem;
+    z-index:20;
 }
-
-.hero-left {
-    left: 0;
+.hero-left{
+    left:0;
 }
-
-.hero-right {
-    right: 0;
+.hero-right{
+    right:0;
 }
-
-.hero-section::after {
-    content: "";
-    position: absolute;
-
-    left: 0;
-    right: 0;
-    bottom: 0;
-
-    height: 90px;
-
-    background: linear-gradient(to bottom,
-            rgba(234, 237, 237, 0),
-            rgba(234, 237, 237, .95));
+.hero-section::after{
+    content:"";
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:0;
+    height:90px;
+    background:linear-gradient(
+        to bottom,
+        rgba(234,237,237,0),
+        rgba(234,237,237,.95)
+    );
 }
-
-.hero-message {
-
-    width: 97.4%;
-
-    height: 38px;
-
-    margin: -73px auto 0;
-
-    background: white;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    position: relative;
-
-    z-index: 5;
-
-    font-size: 14px;
-    padding: 0 20px;
-
+.hero-message{
+    width:97.4%;
+    height:38px;
+    margin:-73px auto 0;
+    background:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    position:relative;
+    z-index:5;
+    font-size:14px;
 }
-
 .hero-message a {
     color: #007185;
     text-decoration: none;
 }
-
 .hero-message a:hover {
     color: #c7511f;
     text-decoration: underline;
 }
+/*=========HERO SECTION=========*/
 
+/*=========SHOP SECTION=========*/
 .shop-section {
 
     position: relative;
@@ -351,7 +335,7 @@ body {
 .shop-box {
     display: flex;
     flex-direction: column;
-    height: 370px;
+    height: 420px;
     background-color: #fff;
     padding: 20px 20px 15px;
     box-shadow:
@@ -373,7 +357,7 @@ body {
 .box-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 14px;
+    gap: 25px;
     flex-grow: 1;
     align-content: start;
 
@@ -411,7 +395,7 @@ body {
     margin-top: auto;
     color: #2162A1;
     text-decoration: none;
-    font-size: 13px;
+    font-size: 14px;
 
 }
 
@@ -431,7 +415,7 @@ a {
     text-decoration: none;
 
 }
-
+/*=======SHOP SECTION=======*/
 /* ---------- Product Slider ---------- */
 .product-slider {
     position: relative;
