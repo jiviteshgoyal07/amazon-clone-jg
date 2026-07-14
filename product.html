@@ -148,122 +148,352 @@
     ========================== -->
     <main class="product-page">
         <!-- Left Thumbnails -->
-        <section class="product-thumbnails">
-            <img src="assets/products/macbook-air/macbook1.jpg" class="thumb active" alt="MacBook View 1">
-            <img src="assets/products/macbook-air/macbook2.jpg" class="thumb" alt="MacBook View 2">
-            <img src="assets/products/macbook-air/macbook3.jpg" class="thumb" alt="MacBook View 3">
-            <img src="assets/products/macbook-air/macbook4.jpg" class="thumb" alt="MacBook View 4">
-            <img src="assets/products/macbook-air/macbook5.jpg" class="thumb" alt="MacBook View 5">
-            <img src="assets/products/macbook-air/macbook6.jpg" class="thumb" alt="MacBook View 6">
+        <section class="product-thumbnails" id="thumbnailContainer">
         </section>
         <!-- Main Product Image -->
         <section class="product-image">
-            <img id="mainImage" src="assets/products/macbook-air/macbook1.jpg" alt="MacBook Air">
+            <img id="mainImage" alt="MacBook Air">
         </section>
         <!-- Product Details -->
         <section class="product-details">
-            <h1 class="product-title">
-                Apple MacBook Air 13-inch Laptop with M4 chip, 16GB Unified Memory, 512GB SSD Storage, Sky Blue
-            </h1>
+            <h1 class="product-title" id="productTitle"></h1>
             <div class="product-rating">
+                <span class="rating-stars">
+                    ★★★★★
+                </span>
+                <span class="rating-number" id="ratingNumber">
+                </span>
+                <a href="#" id="reviewCount">
 
-    <span class="rating-stars">
-        ★★★★★
-    </span>
+                </a>
+                <span>|</span>
+                <a href="#">
+                    Search this page
+                </a>
+            </div>
+            <hr>
+            <div class="price-section">
+                <span class="currency">$</span>
+                <span class="price" id="productPrice">
 
-    <span class="rating-number">
-        4.8
-    </span>
+                </span>
+                <span class="cents">
+                    .00
+                </span>
+            </div>
+            <p class="mrp">
+                List Price:
+                <span id="mrpPrice"></span>
+            </p>
+            <p class="discount" id="discountText">
 
-    <a href="#">
-        2,834 ratings
-    </a>
+            </p>
+            <p class="emi">
+                No Cost EMI available.
+            </p>
+            <h2 class="stock" id="stockStatus"></h2>
+            <p class="delivery">
+                FREE delivery
+                <strong>Tomorrow</strong>
+            </p>
+            <h3 class="about-title">
+                About this item
+            </h3>
+            <ul class="about-list" id="aboutList">
 
-    <span>|</span>
-
-    <a href="#">
-        Search this page
-    </a>
-
-</div>
-<hr>
-<div class="price-section">
-
-    <span class="currency">$</span>
-
-    <span class="price">
-        1,299
-    </span>
-
-    <span class="cents">
-        .00
-    </span>
-
-</div>
-
-<p class="mrp">
-    List Price:
-    <span>$1,499.00</span>
-</p>
-
-<p class="discount">
-    You Save:
-    $200.00 (13%)
-</p>
-<p class="emi">
-    No Cost EMI available.
-</p>
-<p class="stock">
-    In Stock
-</p>
-<p class="delivery">
-    FREE delivery
-    <strong>Tomorrow</strong>
-</p>
-<h3 class="about-title">
-    About this item
-</h3>
-
-<ul class="about-list">
-
-    <li>
-        Apple M4 chip delivers incredible performance.
-    </li>
-
-    <li>
-        13.6-inch Liquid Retina display.
-    </li>
-
-    <li>
-        16GB unified memory.
-    </li>
-
-    <li>
-        512GB SSD storage.
-    </li>
-
-    <li>
-        Up to 18 hours battery life.
-    </li>
-
-</ul>
-
-
+            </ul>
         </section>
         <!-- Buy Box -->
         <aside class="buy-box">
+            <h2 class="buy-price">
+                <span class="currency">$</span>1299<span class="cents">00</span>
+            </h2>
+            <p class="buy-delivery">
+                FREE delivery <strong>Thursday</strong>
+            </p>
+            <p class="buy-location">
+                <i class="fa-solid fa-location-dot"></i>
+                Deliver to India
+            </p>
+            <h3 class="buy-stock">
+                In Stock
+            </h3>
+            <label class="qty-label">
+                Quantity
+            </label>
+            <select class="buy-qty">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+            </select>
+            <button class="cart-btn">
+                Add to Cart
+            </button>
+            <button class="buy-btn">
+                Buy Now
+            </button>
+            <div class="buy-info">
+                <div>
+                    <span>Ships from</span>
+                    <strong>Amazon</strong>
+                </div>
+                <div>
+                    <span>Sold by</span>
+                    <strong>Apple</strong>
+                </div>
+                <div>
+                    <span>Returns</span>
+                    <strong>30-day refund/replacement</strong>
+                </div>
+                <div>
+                    <span>Payment</span>
+                    <strong>Secure transaction</strong>
+                </div>
+            </div>
         </aside>
     </main>
     <!-- =========================
-       RELATED PRODUCTS
-    ========================== -->
-
-
-
+     RELATED PRODUCTS
+========================= -->
+<section class="related-products">
+    <div class="slider-header">
+        <h2>
+            Products related to this item
+        </h2>
+    </div>
+    <div class="product-slider">
+        <button class="slider-left">
+            <i class="fa-solid fa-chevron-left"></i>
+        </button>
+        <div class="slider-track" id="relatedSlider">
+        </div>
+        <button class="slider-right">
+            <i class="fa-solid fa-chevron-right"></i>
+        </button>
+    </div>
+</section>
+<!-- =========================
+        CUSTOMER REVIEWS
+========================= -->
+<section class="reviews-section">
+    <div class="reviews-summary">
+        <h2>Customer reviews</h2>
+        <div class="overall-rating">
+            <span class="overall-stars">
+                ★★★★★
+            </span>
+            <span id="overallRating">
+                4.8 out of 5
+            </span>
+        </div>
+        <p id="totalRatings">
+            2,834 global ratings
+        </p>
+        <div class="rating-bars">
+            <div class="rating-row">
+                <span>5 star</span>
+                <div class="bar">
+                    <div class="fill fill-5"></div>
+                </div>
+                <span>86%</span>
+            </div>
+            <div class="rating-row">
+                <span>4 star</span>
+                <div class="bar">
+                    <div class="fill fill-4"></div>
+                </div>
+                <span>9%</span>
+            </div>
+            <div class="rating-row">
+                <span>3 star</span>
+                <div class="bar">
+                    <div class="fill fill-3"></div>
+                </div>
+                <span>3%</span>
+            </div>
+            <div class="rating-row">
+                <span>2 star</span>
+                <div class="bar">
+                    <div class="fill fill-2"></div>
+                </div>
+                <span>1%</span>
+            </div>
+            <div class="rating-row">
+                <span>1 star</span>
+                <div class="bar">
+                    <div class="fill fill-1"></div>
+                </div>
+                <span>1%</span>
+            </div>
+        </div>
+    </div>
+    <div class="reviews-list">
+        <h2>Top reviews from customers</h2>
+        <div id="reviewsContainer"></div>
+    </div>
+</section>
     <!-- =========================
             FOOTER
     ========================== -->
-
+    <footer>
+        <div class="back-to-top">
+            Back to top
+        </div>
+        <div class="footer-main">
+            <div class="footer-column">
+                <h3>Get to Know Us</h3>
+                <a href="#">Careers</a>
+                <a href="#">Blog</a>
+                <a href="#">About Amazon</a>
+                <a href="#">Investor Relations</a>
+                <a href="#">Amazon Devices</a>
+                <a href="#">Amazon Science</a>
+            </div>
+            <div class="footer-column">
+                <h3>Make Money with Us</h3>
+                <a href="#">Sell products on Amazon</a>
+                <a href="#">Sell on Amazon Business</a>
+                <a href="#">Sell apps on Amazon</a>
+                <a href="#">Become an Affiliate</a>
+                <a href="#">Advertise Your Products</a>
+                <a href="#">Self-Publish with Us</a>
+            </div>
+            <div class="footer-column">
+                <h3>Amazon Payment Products</h3>
+                <a href="#">Amazon Business Card</a>
+                <a href="#">Shop with Points</a>
+                <a href="#">Reload Your Balance</a>
+                <a href="#">Amazon Currency Converter</a>
+            </div>
+            <div class="footer-column">
+                <h3>Let Us Help You</h3>
+                <a href="#">Your Account</a>
+                <a href="#">Your Orders</a>
+                <a href="#">Shipping Rates & Policies</a>
+                <a href="#">Returns & Replacements</a>
+                <a href="#">Manage Your Content</a>
+                <a href="#">Help</a>
+            </div>
+        </div>
+        <div class="footer-middle">
+            <div class="footer-logo">
+                <img src="assets/icons/amazon_logo.png" alt="Amazon Logo">
+            </div>
+            <div class="footer-options">
+                <button class="footer-btn">
+                    <i class="fa-solid fa-globe"></i>
+                    English
+                </button>
+                <button class="footer-btn">
+                    <i class="fa-solid fa-dollar-sign"></i>
+                    USD - U.S. Dollar
+                </button>
+                <button class="footer-btn">
+                    🇺🇸 United States
+                </button>
+            </div>
+        </div>
+        <div class="footer-services">
+            <div class="services-grid">
+                <div class="service">
+                    <h4>Amazon Music</h4>
+                    <p>Stream millions of songs</p>
+                </div>
+                <div class="service">
+                    <h4>Amazon Ads</h4>
+                    <p>Reach customers wherever they spend their time</p>
+                </div>
+                <div class="service">
+                    <h4>6pm</h4>
+                    <p>Score deals on fashion brands</p>
+                </div>
+                <div class="service">
+                    <h4>AbeBooks</h4>
+                    <p>Books, art & collectibles</p>
+                </div>
+                <div class="service">
+                    <h4>ACX</h4>
+                    <p>Audiobook Publishing Made Easy</p>
+                </div>
+                <div class="service">
+                    <h4>Sell on Amazon</h4>
+                    <p>Start a Selling Account</p>
+                </div>
+                <div class="service">
+                    <h4>Veeqo</h4>
+                    <p>Shipping Software Inventory Management</p>
+                </div>
+                <div class="service">
+                    <h4>Amazon Business</h4>
+                    <p>Everything For Your Business</p>
+                </div>
+                <div class="service">
+                    <h4>AmazonGlobal</h4>
+                    <p>Ship Orders Internationally</p>
+                </div>
+                <div class="service">
+                    <h4>Amazon Web Services</h4>
+                    <p>Scalable Cloud Computing Services</p>
+                </div>
+                <div class="service">
+                    <h4>Audible</h4>
+                    <p>Listen to Books & Original Audio Performances</p>
+                </div>
+                <div class="service">
+                    <h4>Box Office Mojo</h4>
+                    <p>Find Movie Box Office Data</p>
+                </div>
+                <div class="service">
+                    <h4>Goodreads</h4>
+                    <p>Book Reviews & Recommendations</p>
+                </div>
+                <div class="service">
+                    <h4>IMDb</h4>
+                    <p>Movies, TV & Celebrities</p>
+                </div>
+                <div class="service">
+                    <h4>IMDbPro</h4>
+                    <p>Get Info Entertainment Professionals Need</p>
+                </div>
+                <div class="service">
+                    <h4>Kindle Direct Publishing</h4>
+                    <p>Indie Digital & Print Publishing Made Easy</p>
+                </div>
+                <div class="service">
+                    <h4>Prime Video Direct</h4>
+                    <p>Video Distribution Made Easy</p>
+                </div>
+                <div class="service">
+                    <h4>Shopbop</h4>
+                    <p>Designer Fashion Brands</p>
+                </div>
+                <div class="service">
+                    <h4>Woot!</h4>
+                    <p>Deals and Shenanigans</p>
+                </div>
+                <div class="service">
+                    <h4>Zappos</h4>
+                    <p>Shoes & Clothing</p>
+                </div>
+                <div class="service">
+                    <h4>Ring</h4>
+                    <p>Smart Home Security Systems</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-bottom-links">
+                <a href="#">Conditions of Use</a>
+                <a href="#">Privacy Notice</a>
+                <a href="#">Consumer Health Data Privacy Disclosure</a>
+                <a href="#">Your Ads Privacy Choices <i class="fa-solid fa-circle-check"></i></a>
+            </div>
+            <p>
+                © 1996-2026, Amazon.com, Inc. or its affiliates
+            </p>
+        </div>
+    </footer>
 
 
     <!-- JavaScript -->
