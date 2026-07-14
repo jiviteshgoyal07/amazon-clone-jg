@@ -14,27 +14,28 @@ body {
     height: 60px;
     background-color: #131921;
     color: white;
-
 }
-
-.nav-logo {
-    width: 120px;
-    height: 60px;
-    display: flex;
-    align-items: center;
+.nav-logo{
+    width:110px;
+    height:60px;
+    padding-top:4px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
 }
-
-.logo-text {
-    font-size: 28px;
-    font-weight: bold;
-    color: white;
-    display: flex;
-    align-items: center;
-    height: 100%;
-    justify-content: center;
-
+.nav-logo a{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    width:100%;
+    height:100%;
 }
-
+.nav-logo img{
+    width:98px;
+    height:auto;
+    object-fit:contain;
+    display:block;
+}
 .border {
     border: 1.5px solid transparent;
     border-radius: 2px;
@@ -46,24 +47,30 @@ body {
 
 }
 
-.nav-address {
-    padding: 0 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+.nav-address{
+    display:flex;
+    align-items:center;
+    padding:0 10px;
+    cursor:pointer;
+}.address-icon{
+    color:white;
+    font-size:18px;
+    margin-right:6px;
+    margin-top:8px;
 }
-
+.address-text{
+    display:flex;
+    flex-direction:column;
+}
 .add-first {
     color: #cccccc;
     font-size: 0.75rem;
 }
-
 .add-second {
     color: white;
     font-size: 0.875rem;
     font-weight: bold;
 }
-
 .nav-search {
     border: 2px solid transparent;
     display: flex;
@@ -137,9 +144,11 @@ body {
 .nav-large {
     display: flex;
     align-items: center;
+    justify-content: flex-start;
     gap: 4px;
-    font-size: 0.875rem;
-    font-weight: bold;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 15px;
 }
 
 .nav-large i {
@@ -148,15 +157,19 @@ body {
 }
 
 .nav-item {
+    height: 60px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: flex-start;
     padding: 0 10px;
     cursor: pointer;
+    text-align: left;
 }
 
 .nav-small {
     font-size: 0.75rem;
+    line-height:14px;
 }
 
 .nav-cart {
@@ -176,14 +189,12 @@ body {
 }
 
 .nav-cart i {
-    font-size: 1.5rem;
+    font-size: 30px;
 }
 
 
 .nav-box {
     height: 60px;
-    display: flex;
-    align-items: center;
 }
 /*          NAVBAR           */
 /*            PANEL          */
@@ -294,7 +305,7 @@ body {
 .hero-message{
     width:97.4%;
     height:38px;
-    margin:-73px auto 0;
+    margin:-68px auto 0;
     background:white;
     display:flex;
     justify-content:center;
@@ -541,7 +552,7 @@ a {
     display:flex;
     justify-content:center;
     align-items:center;
-    gap:20px;
+    gap:70px;
     padding: 30px 20px;
 }
 .footer-logo{
@@ -604,4 +615,82 @@ a {
 }
 .service:hover h4, .service:hover p{
     text-decoration:underline;
+}
+.footer-bottom{
+    background:#131A22;
+    text-align:center;
+    padding:18px 0 35px;
+}
+.footer-bottom-links{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+    flex-wrap: wrap;
+    margin-bottom: 8px;
+}
+.footer-bottom-links a{
+    color:#DDD;
+    font-size:12px;
+    text-decoration: none;
+}
+.footer-bottom-links a:hover{
+    text-decoration: underline;
+}
+.footer-bottom p{
+    color:#DDD;
+    font-size: 12px;
+}
+.footer-bottom i{
+    color:#2A7FFF;
+    margin-left:4px;
+    font-size:11px;
+}
+.signin-section{
+    background:#fff;
+    border-top:1px solid #E7E7E7;
+    border-bottom:1px solid #DDD;
+    margin-top:10px;
+    margin-bottom:0;
+    padding:22px 0;
+}
+.signin-box{
+    width:100%;
+    margin:auto;
+    border:1px solid #DDDDDD;
+    border-radius:4px;
+    padding:22px 0;
+    text-align: center;
+}
+.signin-box h2{
+    font-size:24px;
+    font-weight:700;
+    color:#111;
+    margin-bottom:16px;
+}
+.signin-box button{
+    width:230px;
+    height:30px;
+    border:none;
+    border-radius:18px;
+    background:linear-gradient(to bottom,#FFD84D,#F7CA00);
+    font-size:13px;
+    cursor:pointer;
+}
+.signin-box button:hover{
+    background:linear-gradient(to bottom,#F7D94C,#F2C200);
+}
+.signin-box p{
+    margin-top:8px;
+    font-size:12px;
+}
+.signin-box a{
+    color:#007185;
+    text-decoration:underline;
+}
+.signin-box a:hover{
+    text-decoration:underline;
+}
+.footer-top{
+    margin-top:0;
 }
