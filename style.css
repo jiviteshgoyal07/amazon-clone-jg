@@ -496,7 +496,7 @@ a {
 
 /*================ FOOTER =================*/
 .back-to-top{
-    height:50px;
+    height:49px;
     background:#37475A;
     color:white;
     display:flex;
@@ -533,5 +533,75 @@ a {
     margin-bottom:10px;
 }
 .footer-column a:hover{
+    text-decoration:underline;
+}
+.footer-middle{
+    background: #232F3E;
+    border-top:1px solid #3a4553;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:20px;
+    padding: 30px 20px;
+}
+.footer-logo{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.footer-logo img{
+    width:90px;
+    height:auto;
+    display: block;
+}
+.footer-options{
+    display:flex;
+    gap:12px;
+}
+.footer-btn{
+    background:transparent;
+    color:#DDD;
+    border:1px solid #848688;
+    border-radius:3px;
+    padding: 8px 16px;
+    cursor:pointer;
+    font-size:13px;
+    font-weight:400;
+    display:flex;
+    align-items:center;
+    gap:8px;
+}
+.footer-btn:hover{
+    border-color:white;
+}
+.footer-links{
+    gap:90px;
+}
+.footer-services{
+    background:#131A22;
+    padding:35px 0 25px;
+}
+.services-grid{
+    width:1000px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(7,1fr);
+    gap:22px 28px;
+}
+.service{
+    cursor:pointer
+}
+.service h4{
+    color:white;
+    font-size:12px;
+    font-weight:400;
+    margin-bottom:2px;
+}
+.service p{
+    color:#999;
+    font-size:12px;
+    line-height:1.25;
+}
+.service:hover h4, .service:hover p{
     text-decoration:underline;
 }
