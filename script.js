@@ -6,39 +6,24 @@ const heroSlider = document.getElementById("hero-slider");
 const heroSlides = document.querySelectorAll(".hero-slide");
 const heroLeft = document.getElementById("hero-left");
 const heroRight = document.getElementById("hero-right");
-
 let currentHero = 1;
 const totalSlides = heroSlides.length;
-
 function updateHero() {
-
     heroSlider.style.transform =
         `translateX(-${currentHero * 100}%)`;
-
 }
 function nextHero() {
-
     if (currentHero >= totalSlides - 1) return;
-
     currentHero++;
-
     updateHero();
-
 }
-
 function previousHero() {
-
     if (currentHero <= 0) return;
-
     currentHero--;
-
     updateHero();
-
 }
-
 // ---------- Auto Slider ----------
 heroSlider.addEventListener("transitionend", () => {
-
     // If we reached the first clone
     if (heroSlides[currentHero].id === "first-clone") {
 
@@ -99,31 +84,28 @@ heroLeft.addEventListener("click", () => {
 // ===============================
 // PRODUCT SLIDERS
 // ===============================
-
 const productSliders = document.querySelectorAll(".product-slider");
-
 productSliders.forEach((sliderSection) => {
-
     const slider = sliderSection.querySelector(".slider-track");
     const leftBtn = sliderSection.querySelector(".slider-left");
     const rightBtn = sliderSection.querySelector(".slider-right");
-
     rightBtn.addEventListener("click", () => {
-
         slider.scrollBy({
             left: 500,
             behavior: "smooth"
         });
-
     });
-
     leftBtn.addEventListener("click", () => {
-
         slider.scrollBy({
             left: -500,
             behavior: "smooth"
         });
-
     });
-
+});
+// Back To Top
+document.querySelector(".back-to-top").addEventListener("click", () => {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
 });

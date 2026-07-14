@@ -315,20 +315,13 @@ body {
 
 /*=========SHOP SECTION=========*/
 .shop-section {
-
     position: relative;
-
     margin-top: 20px;
-
     z-index: 10;
-
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-
     gap: 18px;
-
     padding: 0 18px 20px;
-
     background: transparent;
 }
 
@@ -499,4 +492,20 @@ a {
 }
 .product-slider:hover .slider-btn {
     opacity: 1;
+}
+
+/*================ FOOTER =================*/
+.back-to-top{
+    height:50px;
+    background:#37475A;
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:13px;
+    cursor:pointer;
+    transition:.2s;
+}
+.back-to-top:hover{
+    background:#485769;
 }
