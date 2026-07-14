@@ -1,0 +1,314 @@
+body{
+     background: #eaeded;
+     }     /*======HERO SECTION========*/
+.hero-wrapper{
+    background:#eaeded;
+    position:relative;
+}
+.hero-section{
+    position:relative;
+    height:320px;
+    overflow:hidden;
+}
+.hero-slider{
+    display:flex;
+    height:100%;
+    transition:transform .45s ease;
+}
+.hero-slide{
+    min-width:100%;
+    height:100%;
+}
+.hero-image{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    object-position:center top;
+    display:block;
+}
+.hero-left,
+.hero-right{
+    position:absolute;
+    top:0;
+    width:55px;
+    height:300px;
+    border:none;
+    background:transparent;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    cursor:pointer;
+    color:#111;
+    font-size:2.5rem;
+    z-index:20;
+}
+.hero-left{
+    left:0;
+}
+.hero-right{
+    right:0;
+}
+.hero-section::after{
+    content:"";
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:0;
+    height:90px;
+    background:linear-gradient(
+        to bottom,
+        rgba(234,237,237,0),
+        rgba(234,237,237,.95)
+    );
+}
+.hero-message{
+    width:97.4%;
+    height:38px;
+    margin:-68px auto 0;
+    background:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    position:relative;
+    z-index:5;
+    font-size:14px;
+}
+.hero-message a {
+    color: #007185;
+    text-decoration: none;
+}
+.hero-message a:hover {
+    color: #c7511f;
+    text-decoration: underline;
+}
+/*=========HERO SECTION=========*/
+
+/*=========SHOP SECTION=========*/
+.shop-section {
+    position: relative;
+    margin-top: 20px;
+    z-index: 10;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    padding: 0 18px 20px;
+    background: transparent;
+}
+
+.shop-box {
+    display: flex;
+    flex-direction: column;
+    height: 420px;
+    background-color: #fff;
+    padding: 20px 20px 15px;
+    box-shadow:
+        0 1px 3px rgba(0, 0, 0, .12);
+}
+
+.box-title {
+    font-size: 20px;
+    line-height: 26px;
+    font-weight: 550;
+    margin-bottom: 15px;
+    transition: .2s;
+}
+
+.shop-box:hover {
+    transform: translateY(-2px);
+}
+
+.box-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    flex-grow: 1;
+    align-content: start;
+
+
+}
+
+.box-item {
+    display: block;
+    text-decoration: none;
+    color: #0f1111;
+
+}
+
+.box-item img {
+    width: 100%;
+    height: 104px;
+    object-fit: cover;
+    background: white;
+    transition: transform 0.25s ease;
+
+}
+
+.box-item:hover img {
+    transform: scale(1.02);
+}
+
+.box-item p {
+    font-size: 0.75rem;
+    margin-top: 4px;
+
+}
+
+.box-footer {
+    display: inline-block;
+    margin-top: auto;
+    color: #2162A1;
+    text-decoration: none;
+    font-size: 14px;
+
+}
+
+.box-footer:hover {
+    color: #c7511f;
+    text-decoration: underline;
+}
+
+img {
+
+    display: block;
+
+}
+
+a {
+
+    text-decoration: none;
+
+}
+/*=======SHOP SECTION=======*/
+/* ---------- Product Slider ---------- */
+.product-slider {
+    position: relative;
+    overflow: hidden;
+    background: #fff;
+    margin: 20px;
+    padding: 20px 20px 30px;
+}
+.slider-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+.slider-header h2 {
+    font-size: 21px;
+    font-weight: 700;
+}
+.slider-header a {
+    color: #007185;
+    font-size: 14px;
+}
+.slider-header a:hover {
+    color: #C7511F;
+    text-decoration: underline;
+}
+.slider-container {
+    position: relative;
+}
+.slider-track {
+    margin-top: 10px;
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    padding: 10px 8px;
+}
+.slider-track::-webkit-scrollbar {
+    display: none;
+}
+.slider-track img{
+    height: 200px;
+    width: auto;
+    object-fit: contain;
+    flex-shrink: 0;
+    cursor: pointer;
+    transition: .25s;
+}
+.slider-track img:hover{
+    transform:scale(1.03);
+}
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 100px;
+    border-radius:8px;
+    border: none;
+    background: white;
+    font-size: 30px;
+    color:#111;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .2);
+    cursor: pointer;
+    z-index: 20;
+    opacity: 0;
+    transition: opacity .2s;
+}
+.slider-left {
+    left: 0;
+}
+.slider-right {
+    right: 0;
+}
+.slider-btn i {
+    font-size: 22px;
+}
+.product-slider:hover .slider-btn {
+    opacity: 1;
+}
+
+.signin-section{
+    background:#fff;
+    border-top:1px solid #E7E7E7;
+    border-bottom:1px solid #DDD;
+    margin-top:10px;
+    margin-bottom:0;
+    padding:22px 0;
+}
+.signin-box{
+    width:100%;
+    margin:auto;
+    border:1px solid #DDDDDD;
+    border-radius:4px;
+    padding:22px 0;
+    text-align: center;
+}
+.signin-box h2{
+    font-size:24px;
+    font-weight:700;
+    color:#111;
+    margin-bottom:16px;
+}
+.signin-box button{
+    width:230px;
+    height:30px;
+    border:none;
+    border-radius:18px;
+    background:linear-gradient(to bottom,#FFD84D,#F7CA00);
+    font-size:13px;
+    cursor:pointer;
+}
+.signin-box button:hover{
+    background:linear-gradient(to bottom,#F7D94C,#F2C200);
+}
+.signin-box p{
+    margin-top:8px;
+    font-size:12px;
+}
+.signin-box a{
+    color:#007185;
+    text-decoration:underline;
+}
+.signin-box a:hover{
+    text-decoration:underline;
+}
+.footer-top{
+    margin-top:0;
+}

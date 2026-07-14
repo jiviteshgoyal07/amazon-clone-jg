@@ -1,0 +1,178 @@
+body{
+    background: white;
+}
+.breadcrumb{
+    height:34px;
+    display:flex;
+    align-items:center;
+    gap:8px;
+    padding:0 20px;
+    font-size:12px;
+    background:white;
+    margin-top: 0;
+}
+.breadcrumb a{
+    color:#565959;
+    text-decoration:none;
+}
+.breadcrumb a:hover{
+    color:#C7511F;
+    text-decoration:underline;
+}
+.current{
+    color:#0F1111;
+}
+.product-page{
+    display:grid;
+    grid-template-columns:
+        65px
+        570px
+        440px
+        280px;
+    gap:18px;
+    padding:18px;
+    align-items:start;
+}
+.product-thumbnails{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    position:sticky;
+    top:15px;
+
+}
+.thumb{
+    width:60px;
+    height:60px;
+    object-fit:contain;
+    border:1px solid #d5d9d9;
+    border-radius:6px;
+    cursor:pointer;
+    padding:4px;
+    background:#fff;
+    transition:.2s;
+}
+.thumb:hover{
+    border:2px solid #007185;
+}
+.thumb.active{
+    border:2px solid #F08804;
+}
+.product-image{
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+    padding-top: 8px;
+    padding-right: 8px;
+    position:sticky;
+    top:15px;
+    background:#fff;
+    border:none;
+}
+
+.product-image img{
+    width:84%;
+    max-width:520px;
+    object-fit:contain;
+}
+.product-details{
+    padding-top:8px;
+    background:#fff;
+}
+.buy-box{
+    width: 280px;
+    min-height:600px;
+    background:#fafafa;
+    border:1px solid #d5d9d9;
+    border-radius:8px;
+}
+.product-title{
+    max-width:430px;
+    font-size:19px;
+    font-weight:400;
+    line-height:1.35;
+    color:#0F1111;
+}
+.product-rating{
+    margin-top:10px;
+    display:flex;
+    align-items:center;
+    gap:8px;
+    font-size:14px;
+}
+.rating-stars{
+    color:#FFA41C;
+    font-size:15px;
+}
+.rating-number{
+    color:#007185;
+}
+.product-rating a{
+    color:#007185;
+    text-decoration:none;
+}
+.product-rating a:hover{
+    color:#C7511F;
+    text-decoration:underline;
+}
+.product-details hr{
+    margin:14px 0;
+    border:none;
+    border-top:1px solid #DDD;
+}
+.price-section{
+    display:flex;
+    align-items:flex-start;
+    margin-top:8px;
+}
+.currency{
+    font-size:18px;
+    margin-top:8px;
+}
+.price{
+    font-size:44px;
+    line-height:1;
+}
+.cents{
+    font-size:16px;
+    margin-top:8px;
+}
+.mrp{
+    margin-top:8px;
+    color:#565959;
+    font-size:14px;
+}
+.mrp span{
+    text-decoration:line-through;
+}
+.discount{
+    color:#B12704;
+    margin-top:4px;
+    font-size:14px;
+}
+.emi{
+    margin-top:12px;
+    font-size:14px;
+}
+.stock{
+    color:#007600;
+    font-size:30px;
+    margin-top:16px;
+}
+.delivery{
+    margin-top:8px;
+    font-size:14px;
+}
+.about-title{
+    margin-top:20px;
+    font-size:18px;
+}
+.about-list{
+    margin-top:8px;
+    padding-left:20px;
+}
+.about-list li{
+    margin-bottom:8px;
+    line-height:1.45;
+    font-size:14px;
+}
