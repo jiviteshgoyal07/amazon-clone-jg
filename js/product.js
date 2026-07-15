@@ -310,13 +310,6 @@ productSliders.forEach((sliderSection) => {
         });
     });
 });
-const backToTop = document.querySelector(".back-to-top");
-backToTop.addEventListener("click", () => {
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-    });
-});
 
 const reviewsContainer = document.getElementById("reviewsContainer");
 reviews.forEach(review => {
@@ -343,6 +336,25 @@ ${review.text}
 `;
 });
 
+// ============================
+// BACK TO TOP
+// ============================
+
+const backToTop =
+document.querySelector(".back-to-top");
+
+if(backToTop){
+
+    backToTop.addEventListener("click",()=>{
+
+        window.scrollTo({
+            top:0,
+            behavior:"smooth"
+        });
+
+    });
+
+}
 // ============================
 // CART SYSTEM
 // ============================
