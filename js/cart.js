@@ -116,53 +116,85 @@ function renderCart() {
             item.quantity;
 
         cartItems.innerHTML += `
+<div class="cart-item">
 
-        <div class="cart-item">
+    <div class="cart-image">
+        <img src="${image}" alt="${item.name}">
+    </div>
 
-            <img src="${image}" alt="${item.name}">
+    <div class="cart-details">
 
-            <div class="cart-info">
+        <h2 class="cart-title">
+            ${item.name}
+        </h2>
 
-                <h3>${item.name}</h3>
+        <p class="stock">
+            In Stock
+        </p>
 
-                <h2>${formatPrice(item.price)}</h2>
+        <p class="delivery">
+            Eligible for FREE Delivery
+        </p>
 
-                <div class="qty-controls">
+       <div class="cart-actions">
 
-                    <button
-                        class="minus"
-                        data-id="${item.id}">
-                        −
-                    </button>
+    <select class="qty-select" data-id="${item.id}">
 
-                    <span>${item.quantity}</span>
+        ${Array.from(
+    {
+        length: Math.max(10, item.quantity)
+    },
+    (_, i) => `
+        <option
+            value="${i + 1}"
+            ${item.quantity === i + 1 ? "selected" : ""}>
+            Qty: ${i + 1}
+        </option>
+`
+).join("")}
 
-                    <button
-                        class="plus"
-                        data-id="${item.id}">
-                        +
-                    </button>
+    </select>
 
-                </div>
+    <span class="divider">|</span>
 
-                <button
-                    class="delete-btn"
-                    data-id="${item.id}">
+    <button
+        class="delete-btn"
+        data-id="${item.id}">
+        Delete
+    </button>
 
-                    Delete
+    <span class="divider">|</span>
 
-                </button>
+    <button
+        class="save-btn"
+        data-id="${item.id}">
+        Save for later
+    </button>
 
-            </div>
+    <span class="divider">|</span>
 
-        </div>
+    <button
+        class="share-btn">
+        Share
+    </button>
 
-        `;
+</div>
+
+    </div>
+
+    <div class="cart-price">
+
+        ${formatPrice(item.price * item.quantity)}
+
+    </div>
+
+</div>
+`;
 
     });
 
     subtotal.textContent =
-    formatPrice(total);
+        formatPrice(total);
 
     totalItems.textContent =
         totalQuantity;
@@ -181,54 +213,24 @@ function renderCart() {
 
 function addEvents() {
 
-    // ---------- PLUS ----------
+    document.querySelectorAll(".qty-select")
+.forEach(select=>{
 
-    document.querySelectorAll(".plus").forEach(btn => {
+    select.addEventListener("change",()=>{
 
-        btn.addEventListener("click", () => {
+        const id=Number(select.dataset.id);
 
-            const id =
-                Number(btn.dataset.id);
+        const item=
+        cartData.find(p=>p.id===id);
 
-            const item =
-                cartData.find(product => product.id === id);
+        item.quantity=
+        Number(select.value);
 
-            item.quantity++;
-
-            renderCart();
-
-        });
+        renderCart();
 
     });
 
-    // ---------- MINUS ----------
-
-    document.querySelectorAll(".minus").forEach(btn => {
-
-        btn.addEventListener("click", () => {
-
-            const id =
-                Number(btn.dataset.id);
-
-            const item =
-                cartData.find(product => product.id === id);
-
-            item.quantity--;
-
-            if (item.quantity <= 0) {
-
-                const index =
-                    cartData.findIndex(product => product.id === id);
-
-                cartData.splice(index, 1);
-
-            }
-
-            renderCart();
-
-        });
-
-    });
+});
 
     // ---------- DELETE ----------
 
