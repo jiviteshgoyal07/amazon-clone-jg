@@ -63,3 +63,41 @@ body{
 .cart-info h2{
     color:#B12704;
 }
+.qty-controls{
+display:flex;
+align-items:center;
+gap:12px;
+margin:18px 0;
+}
+.qty-controls button{
+width:34px;
+height:34px;
+border:none;
+border-radius:50%;
+background:#FFD814;
+cursor:pointer;
+font-size:20px;
+font-weight:bold;
+transition:.2s;
+}
+.qty-controls button:hover{
+background:#F7CA00;
+}
+.qty-controls span{
+font-size:18px;
+font-weight:bold;
+min-width:24px;
+text-align:center;
+}
+.delete-btn{
+background:none;
+border:none;
+color:#007185;
+cursor:pointer;
+font-size:15px;
+padding:0;
+}
+.delete-btn:hover{
+color:#C7511F;
+text-decoration:underline;
+}
