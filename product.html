@@ -72,7 +72,12 @@
         </div>
         <div class="nav-cart nav-box border">
             <i class="fa-solid fa-cart-shopping"></i>
-            <span class="cart-text">Cart</span>
+            <span id="cartCount" class="cart-count">
+                0
+            </span>
+            <span class="cart-text">
+                Cart
+            </span>
         </div>
     </div>
     <!-- Navbar Ends -->
@@ -206,7 +211,9 @@
         <!-- Buy Box -->
         <aside class="buy-box">
             <h2 class="buy-price">
-                <span class="currency">$</span>1299<span class="cents">00</span>
+                <span class="currency">$</span>
+                <span id="buyBoxPrice">1299</span>
+                <span class="cents">00</span>
             </h2>
             <p class="buy-delivery">
                 FREE delivery <strong>Thursday</strong>
@@ -227,7 +234,7 @@
                 <option>3</option>
                 <option>4</option>
             </select>
-            <button class="cart-btn">
+            <button id="addToCartBtn" class="cart-btn">
                 Add to Cart
             </button>
             <button class="buy-btn">
@@ -256,83 +263,83 @@
     <!-- =========================
      RELATED PRODUCTS
 ========================= -->
-<section class="related-products">
-    <div class="slider-header">
-        <h2>
-            Products related to this item
-        </h2>
-    </div>
-    <div class="product-slider">
-        <button class="slider-left">
-            <i class="fa-solid fa-chevron-left"></i>
-        </button>
-        <div class="slider-track" id="relatedSlider">
+    <section class="related-products">
+        <div class="slider-header">
+            <h2>
+                Products related to this item
+            </h2>
         </div>
-        <button class="slider-right">
-            <i class="fa-solid fa-chevron-right"></i>
-        </button>
-    </div>
-</section>
-<!-- =========================
+        <div class="product-slider">
+            <button class="slider-left">
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            <div class="slider-track" id="relatedSlider">
+            </div>
+            <button class="slider-right">
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
+        </div>
+    </section>
+    <!-- =========================
         CUSTOMER REVIEWS
 ========================= -->
-<section class="reviews-section">
-    <div class="reviews-summary">
-        <h2>Customer reviews</h2>
-        <div class="overall-rating">
-            <span class="overall-stars">
-                ★★★★★
-            </span>
-            <span id="overallRating">
-                4.8 out of 5
-            </span>
+    <section class="reviews-section">
+        <div class="reviews-summary">
+            <h2>Customer reviews</h2>
+            <div class="overall-rating">
+                <span class="overall-stars">
+                    ★★★★★
+                </span>
+                <span id="overallRating">
+                    4.8 out of 5
+                </span>
+            </div>
+            <p id="totalRatings">
+                2,834 global ratings
+            </p>
+            <div class="rating-bars">
+                <div class="rating-row">
+                    <span>5 star</span>
+                    <div class="bar">
+                        <div class="fill fill-5"></div>
+                    </div>
+                    <span>86%</span>
+                </div>
+                <div class="rating-row">
+                    <span>4 star</span>
+                    <div class="bar">
+                        <div class="fill fill-4"></div>
+                    </div>
+                    <span>9%</span>
+                </div>
+                <div class="rating-row">
+                    <span>3 star</span>
+                    <div class="bar">
+                        <div class="fill fill-3"></div>
+                    </div>
+                    <span>3%</span>
+                </div>
+                <div class="rating-row">
+                    <span>2 star</span>
+                    <div class="bar">
+                        <div class="fill fill-2"></div>
+                    </div>
+                    <span>1%</span>
+                </div>
+                <div class="rating-row">
+                    <span>1 star</span>
+                    <div class="bar">
+                        <div class="fill fill-1"></div>
+                    </div>
+                    <span>1%</span>
+                </div>
+            </div>
         </div>
-        <p id="totalRatings">
-            2,834 global ratings
-        </p>
-        <div class="rating-bars">
-            <div class="rating-row">
-                <span>5 star</span>
-                <div class="bar">
-                    <div class="fill fill-5"></div>
-                </div>
-                <span>86%</span>
-            </div>
-            <div class="rating-row">
-                <span>4 star</span>
-                <div class="bar">
-                    <div class="fill fill-4"></div>
-                </div>
-                <span>9%</span>
-            </div>
-            <div class="rating-row">
-                <span>3 star</span>
-                <div class="bar">
-                    <div class="fill fill-3"></div>
-                </div>
-                <span>3%</span>
-            </div>
-            <div class="rating-row">
-                <span>2 star</span>
-                <div class="bar">
-                    <div class="fill fill-2"></div>
-                </div>
-                <span>1%</span>
-            </div>
-            <div class="rating-row">
-                <span>1 star</span>
-                <div class="bar">
-                    <div class="fill fill-1"></div>
-                </div>
-                <span>1%</span>
-            </div>
+        <div class="reviews-list">
+            <h2>Top reviews from customers</h2>
+            <div id="reviewsContainer"></div>
         </div>
-    </div>
-    <div class="reviews-list">
-        <h2>Top reviews from customers</h2>
-        <div id="reviewsContainer"></div>
-    </div>
-</section>
+    </section>
     <!-- =========================
             FOOTER
     ========================== -->

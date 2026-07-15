@@ -302,6 +302,8 @@ body{
     background:white;
     transition:.25s;
     cursor:pointer;
+    text-decoration: none;
+    color:#0F1111;
 }
 .related-card:hover{
     box-shadow:0 4px 12px rgba(0,0,0,.15);
