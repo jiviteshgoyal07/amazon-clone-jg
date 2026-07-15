@@ -1,23 +1,7 @@
-// ===============================
+// ==========================================
 // COMMON.JS
 // Shared functionality for all pages
-// ===============================
-
-// ===============================
-// CART DATA
-// ===============================
-
-const cart =
-    JSON.parse(localStorage.getItem("cart")) || [];
-
-// Upgrade old cart items
-cart.forEach(item => {
-
-    if (!item.quantity) {
-        item.quantity = 1;
-    }
-
-});
+// ==========================================
 
 // ===============================
 // UPDATE NAVBAR CART COUNT
@@ -30,19 +14,16 @@ function updateCartCount() {
 
     if (!cartCount) return;
 
-    const totalQuantity =
-        cart.reduce((sum, item) => {
-
-            return sum + item.quantity;
-
-        }, 0);
+    const cart =
+        getCart();
 
     cartCount.textContent =
-        totalQuantity;
+        getTotalQuantity(cart);
 
 }
 
 updateCartCount();
+
 
 // ===============================
 // BACK TO TOP

@@ -1,4 +1,4 @@
-const products = window.products;
+
 // ============================
 // GET PRODUCT ID FROM URL
 // ============================
@@ -7,10 +7,9 @@ const params = new URLSearchParams(window.location.search);
 
 const productId = Number(params.get("id")) || 1;
 const product =
-    products.find(item => item.id === productId)
-    || products[0];
+    getProductById(productId) || products[0];
 const relatedProducts =
-    products.filter(item => item.id !== product.id);
+    getRelatedProducts(product.id);
 
 const reviews = [
     {
@@ -52,11 +51,11 @@ document.getElementById("ratingNumber").textContent = product.rating;
 document.getElementById("reviewCount").textContent =
     `${product.reviews.toLocaleString()} ratings`;
 document.getElementById("productPrice").textContent =
-    product.price.toLocaleString();
+    formatPrice(product.price);
 document.getElementById("buyBoxPrice").textContent =
-    product.price.toLocaleString();
+    formatPrice(product.price);
 document.getElementById("mrpPrice").textContent =
-    `$${product.mrp.toLocaleString()}.00`;
+    formatPrice(product.mrp);
 document.getElementById("discountText").textContent =
     `You Save: $${(product.mrp - product.price).toLocaleString()}.00 (${product.discount}%)`;
 document.getElementById("stockStatus").textContent =
@@ -88,7 +87,7 @@ product.images.forEach((image, index) => {
 // MAIN IMAGE
 // ============================
 const mainImage =
-document.getElementById("mainImage");
+    document.getElementById("mainImage");
 
 mainImage.src = product.images[0];
 mainImage.alt = product.name;
@@ -123,7 +122,7 @@ relatedProducts.forEach(item => {
         </div>
 
         <div class="related-price">
-            $${item.price}
+         ${formatPrice(item.price)}
         </div>
 
     </a>
@@ -177,29 +176,11 @@ ${review.text}
 `;
 });
 
-// ============================
-// BACK TO TOP
-// ============================
 
-const backToTop =
-document.querySelector(".back-to-top");
-
-if(backToTop){
-
-    backToTop.addEventListener("click",()=>{
-
-        window.scrollTo({
-            top:0,
-            behavior:"smooth"
-        });
-
-    });
-
-}
 // ============================
 // CART SYSTEM
 // ============================
-let cart = JSON.parse(localStorage.getItem("cart")) || [];
+let cart = getCart();
 cart.forEach(item => {
 
     if (!item.quantity) {
@@ -209,11 +190,10 @@ cart.forEach(item => {
     }
 
 });
-function saveCart() {
-    localStorage.setItem(
-        "cart",
-        JSON.stringify(cart)
-    );
+function saveCurrentCart() {
+
+    saveCart(cart);
+
 }
 function addToCart() {
 
@@ -241,10 +221,13 @@ function addToCart() {
 
     }
 
-    saveCart();
+    saveCurrentCart();
+    updateCartCount();
 
-// Update the shared cart data used by common.js
-window.location.reload();
+    showToast("Added to Cart");
+
+    // Update the shared cart data used by common.js
+    updateCartCount();
 
 }
 document

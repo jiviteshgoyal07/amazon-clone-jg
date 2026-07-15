@@ -125,7 +125,7 @@ function renderCart() {
 
                 <h3>${item.name}</h3>
 
-                <h2>$${item.price.toLocaleString()}</h2>
+                <h2>${formatPrice(item.price)}</h2>
 
                 <div class="qty-controls">
 
@@ -162,7 +162,7 @@ function renderCart() {
     });
 
     subtotal.textContent =
-        total.toLocaleString();
+    formatPrice(total);
 
     totalItems.textContent =
         totalQuantity;

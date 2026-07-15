@@ -389,3 +389,21 @@ body {
     margin-left:4px;
     font-size:11px;
 }
+.toast{
+position:fixed;
+bottom:30px;
+right:30px;
+background:#131921;
+color:white;
+padding:14px 22px;
+border-radius:8px;
+font-size:15px;
+opacity:0;
+transform:translateY(20px);
+transition:.3s;
+z-index:9999;
+}
+.toast.show{
+opacity:1;
+transform:translateY(0);
+}
