@@ -4,46 +4,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Amazon Clone | Cart</title>
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/cart.css">
+    <title>Amazon | Orders</title>
+
     <link rel="stylesheet" href="css/common.css">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="css/orders.css">
 </head>
 
 <body>
-    <!--Navbar Starts-->
+     <!--Navbar Starts-->
     <div class="navbar">
         <div class="nav-logo border">
             <a href="index.html">
                 <img src="assets/icons/amazon_logo.png" alt="Amazon Logo">
             </a>
         </div>
+
         <a href="#" class="nav-address nav-box border">
+
             <div class="address-icon">
                 <i class="fa-solid fa-location-dot"></i>
             </div>
+
             <div class="address-text">
+
                 <p class="add-first">
                     Deliver to
                 </p>
+
                 <p class="add-second">
                     India
                 </p>
+
             </div>
+
         </a>
+
         <div class="nav-search">
             <select class="search-select">
                 <option>All</option>
                 <option>Electronics</option>
                 <option>Books</option>
             </select>
+
             <input type="text" class="search-input" placeholder="Search Amazon">
+
             <button class="search-button">
                 <i class="fa-solid fa-magnifying-glass"></i>
             </button>
         </div>
+
         <div class="nav-language nav-box border">
             <span class="lang-icon">
                 🇮🇳
@@ -52,35 +61,52 @@
             <span class="lang-dropdown">
                 <i class="fa-solid fa-caret-down"></i>
             </span>
+
         </div>
+
         <div class="nav-item nav-box border">
+
             <p class="nav-small">
                 Hello, Sign in
             </p>
+
             <p class="nav-large">
                 <span>Account & Lists</span>
                 <i class="fa-solid fa-caret-down"></i>
             </p>
+
         </div>
+
         <a href="orders.html" class="nav-item nav-box border">
+
             <p class="nav-small">
                 Returns
             </p>
+
             <p class="nav-large">
                 & Orders
             </p>
+
         </a>
+
         <a href="cart.html" class="nav-cart nav-box border">
+
             <i class="fa-solid fa-cart-shopping"></i>
+
             <span id="cartCount" class="cart-count">
                 0
             </span>
+
             <span class="cart-text">
                 Cart
             </span>
+
         </a>
+
+
     </div>
     <!-- Navbar Ends -->
+
     <!-- Panel Starts here-->
     <div class="panel">
         <div class="panel-all border">
@@ -137,71 +163,20 @@
         </div>
     </div>
     <!-- Panel Ends here -->
-    <main class="cart-page">
 
-        <section class="cart-left">
+    <main class="orders-page">
 
-            <h1>Shopping Cart</h1>
+        <h1 class="page-title">
+            Your Orders
+        </h1>
 
-            <hr class="cart-divider">
+        <div id="ordersContainer">
 
-            <div id="cartItems"></div>
-
-        </section>
-
-        <aside class="cart-right">
-
-            <div class="summary-card">
-
-                <h2 class="summary-title">
-                    Subtotal (<span id="totalItems">0</span> items)
-                </h2>
-
-                <h3 id="subtotal">$0</h3>
-
-                <p class="summary-delivery">
-                    ✓ FREE Delivery
-                </p>
-
-                <hr class="summary-divider">
-
-                <div class="summary-total">
-
-                    <span>Order Total</span>
-
-                    <span id="summaryTotal">$0</span>
-
-                </div>
-
-                <a href="checkout.html">
-
-                    <button class="checkout-btn">
-
-                        Proceed to Checkout
-
-                    </button>
-
-                </a>
-
-            </div>
-
-            <section class="saved-section">
-
-                <h2 class="saved-heading">
-
-                    Saved for later
-
-                </h2>
-
-                <div id="savedItems"></div>
-
-            </section>
-
-        </aside>
+        </div>
 
     </main>
 
-    <footer>
+     <footer>
         <div class="back-to-top">
             Back to top
         </div>
@@ -361,11 +336,11 @@
     </footer>
 
 
-    <!-- JavaScript -->
+
     <script src="js/products.js"></script>
     <script src="js/utils.js"></script>
     <script src="js/common.js"></script>
-    <script src="js/cart.js"></script>
+    <script src="js/orders.js"></script>
 </body>
 
 </html>

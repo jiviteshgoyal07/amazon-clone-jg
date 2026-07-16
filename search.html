@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/search.css">
+</head>
+
+<body>
+    <div id="navbar-container"></div>
+
+    <main class="search-page">
+
+        <aside class="search-sidebar">
+
+            <h2>Filters</h2>
+
+            <div class="filter-group">
+
+                <h3>Department</h3>
+
+                <label>
+                    <input type="checkbox" value="Laptop" class="category-filter">
+                    Laptop
+                </label>
+
+                <label>
+                    <input type="checkbox" value="Accessory" class="category-filter">
+                    Accessory
+                </label>
+
+            </div>
+
+            <div class="filter-group">
+
+                <h3>Price</h3>
+
+                <label>
+                    <input type="radio" name="price" value="100">
+                    Under $100
+                </label>
+
+                <label>
+                    <input type="radio" name="price" value="500">
+                    $100 - $500
+                </label>
+
+                <label>
+                    <input type="radio" name="price" value="1000">
+                    Above $500
+                </label>
+
+            </div>
+
+        </aside>
+
+        <section class="results-section">
+
+            <div class="search-header">
+
+                <h1 id="searchTitle"></h1>
+
+                <select id="sortSelect">
+
+                    <option value="featured">
+                        Featured
+                    </option>
+
+                    <option value="low-high">
+                        Price: Low to High
+                    </option>
+
+                    <option value="high-low">
+                        Price: High to Low
+                    </option>
+
+                    <option value="rating">
+                        Highest Rated
+                    </option>
+
+                </select>
+
+            </div>
+
+            <div id="searchResults"></div>
+
+        </section>
+
+    </main>
+
+    <div id="footer-container"></div>
+
+    <script src="js/products.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/search.js"></script>
+</body>
+
+</html>

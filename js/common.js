@@ -29,10 +29,12 @@ updateCartCount();
 // BACK TO TOP
 // ===============================
 
-const backToTop =
-    document.querySelector(".back-to-top");
+function initializeBackToTop() {
 
-if (backToTop) {
+    const backToTop =
+        document.querySelector(".back-to-top");
+
+    if (!backToTop) return;
 
     backToTop.addEventListener("click", () => {
 
@@ -47,3 +49,54 @@ if (backToTop) {
     });
 
 }
+
+// ===============================
+// NAVBAR EVENTS
+// ===============================
+
+function initializeNavbar() {
+
+    initializeSearch();
+
+}
+function initializeSearch() {
+
+    const input =
+        document.querySelector(".search-input");
+
+    const button =
+        document.querySelector(".search-button");
+
+    if (!input || !button) return;
+
+    function performSearch() {
+
+        const query = input.value.trim();
+
+        if (query === "") return;
+
+        window.location.href =
+            `search.html?q=${encodeURIComponent(query)}`;
+
+    }
+
+    button.addEventListener(
+        "click",
+        performSearch
+    );
+
+    input.addEventListener(
+        "keydown",
+        (event) => {
+
+            if (event.key === "Enter") {
+
+                performSearch();
+
+            }
+
+        }
+    );
+
+}
+

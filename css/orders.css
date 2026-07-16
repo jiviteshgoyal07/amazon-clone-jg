@@ -1,0 +1,124 @@
+body {
+    background: #eaeded;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.orders-page {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.page-title {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+.order-card {
+    background: #fff;
+    border: 1px solid #d5d9d9;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 40px;
+}
+
+.order-header {
+    background: #f0f2f2;
+    border-bottom: 1px solid #d5d9d9;
+    display: grid;
+    justify-content: space-between;
+    padding: 18px 25px;
+    grid-template-columns: 220px 180px 1fr;
+    align-items: center;
+    gap: 40px;
+}
+
+.order-header p {
+    margin: 0;
+    font-size: 12px;
+    color: #565959;
+}
+
+.order-header strong {
+    display: block;
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+.order-items {
+    padding: 20px 25px;
+}
+
+.order-item {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    padding: 18px 0;
+    border-bottom: 1px solid #ececec;
+}
+
+.order-item:last-child {
+    border-bottom: none;
+}
+
+.order-item img {
+    width: 95px;
+    height: 95px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.order-info {
+    flex: 1;
+}
+
+.order-info h3 {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 12px;
+    line-height: 1.4;
+}
+
+.order-info p {
+    margin: 6px 0;
+    color: #565959;
+}
+
+.buy-again-btn {
+    background: #FFD814;
+    border: 1px solid #FCD200;
+    border-radius: 999px;
+    padding: 8px 18px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.buy-again-btn:hover {
+    background: #F7CA00;
+}
+
+.delivery-status {
+    color: #007600;
+    font-weight: 600;
+}
+
+.order-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.view-btn {
+    background: #fff;
+    border: 1px solid #D5D9D9;
+    border-radius: 999px;
+    padding: 8px 18px;
+    cursor: pointer;
+}
+
+.view-btn:hover {
+    background: #F7FAFA;
+}
