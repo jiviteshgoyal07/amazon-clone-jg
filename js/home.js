@@ -103,3 +103,75 @@ productSliders.forEach((sliderSection) => {
     });
 });
 
+// ============================
+// RECENTLY VIEWED
+// ============================
+
+const recentlyViewed =
+    getRecentlyViewed();
+
+const recentlyViewedSlider =
+    document.getElementById("recentlyViewedSlider");
+
+if (
+    recentlyViewedSlider &&
+    recentlyViewed.length > 0
+) {
+
+    recentlyViewed.forEach(product => {
+
+        recentlyViewedSlider.innerHTML += `
+
+<a href="product.html?id=${product.id}" class="rv-card">
+
+    <div
+        class="wishlist-icon"
+        data-id="${product.id}"
+    >
+
+        ♡
+
+    </div>
+
+    <div class="rv-image">
+
+        <img src="${product.images[0]}">
+
+    </div>
+
+    <div class="rv-title">
+
+        ${product.name}
+
+    </div>
+
+    <div class="rv-rating">
+
+        ⭐⭐⭐⭐⭐
+
+        <span>${product.rating}</span>
+
+        (${product.reviews.toLocaleString()})
+
+    </div>
+
+    <div class="rv-price">
+
+        ${formatPrice(product.price)}
+
+    </div>
+
+    <div class="rv-prime">
+
+        ✔ Prime
+
+    </div>
+
+</a>
+    });
+
+} else if (recentlyViewedSlider) {
+
+    recentlyViewedSlider.parentElement.parentElement.style.display = "none";
+
+}

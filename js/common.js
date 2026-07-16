@@ -100,3 +100,54 @@ function initializeSearch() {
 
 }
 
+// ============================
+// WISHLIST
+// ============================
+
+function getWishlist() {
+
+    return JSON.parse(
+        localStorage.getItem("wishlist")
+    ) || [];
+
+}
+
+function saveWishlist(wishlist) {
+
+    localStorage.setItem(
+        "wishlist",
+        JSON.stringify(wishlist)
+    );
+
+}
+
+function updateWishlistCount() {
+
+    const wishlist =
+        getWishlist();
+
+    const badge =
+        document.getElementById("wishlistCount");
+
+    if (!badge) return;
+
+    badge.textContent =
+        wishlist.length;
+
+}
+// ============================
+// RECENTLY VIEWED
+// ============================
+
+function getRecentlyViewed() {
+    return JSON.parse(
+        localStorage.getItem("recentlyViewed")
+    ) || [];
+}
+
+function saveRecentlyViewed(items) {
+    localStorage.setItem(
+        "recentlyViewed",
+        JSON.stringify(items)
+    );
+}

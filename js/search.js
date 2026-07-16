@@ -16,6 +16,12 @@ let filteredProducts = products.filter(product =>
 
 function renderProducts() {
 
+    const title =
+        document.getElementById("searchTitle");
+
+    title.textContent =
+        `${filteredProducts.length} result${filteredProducts.length !== 1 ? "s" : ""} for "${params.get("q") || ""}"`;
+
     resultsContainer.innerHTML = "";
 
     if (filteredProducts.length === 0) {
@@ -187,6 +193,9 @@ function applyFilters() {
         [...document.querySelectorAll(".category-filter:checked")]
             .map(item => item.value);
 
+    const selectedPrice =
+        document.querySelector('input[name="price"]:checked')?.value;
+
     filteredProducts =
         products.filter(product => {
 
@@ -196,10 +205,32 @@ function applyFilters() {
                     .includes(query);
 
             const matchesCategory =
-                selectedCategories.length === 0
-                || selectedCategories.includes(product.category);
+                selectedCategories.length === 0 ||
+                selectedCategories.includes(product.category);
 
-            return matchesSearch && matchesCategory;
+            let matchesPrice = true;
+
+            if (selectedPrice === "100") {
+
+                matchesPrice = product.price < 100;
+
+            } else if (selectedPrice === "500") {
+
+                matchesPrice =
+                    product.price >= 100 &&
+                    product.price <= 500;
+
+            } else if (selectedPrice === "1000") {
+
+                matchesPrice = product.price > 500;
+
+            }
+
+            return (
+                matchesSearch &&
+                matchesCategory &&
+                matchesPrice
+            );
 
         });
 
@@ -217,6 +248,18 @@ document
         );
 
     });
+
+document
+    .querySelectorAll('input[name="price"]')
+    .forEach(filter => {
+
+        filter.addEventListener(
+            "change",
+            applyFilters
+        );
+
+    });
+
 
 const sortSelect =
     document.getElementById("sortSelect");

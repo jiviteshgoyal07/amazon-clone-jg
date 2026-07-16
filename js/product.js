@@ -8,6 +8,28 @@ const params = new URLSearchParams(window.location.search);
 const productId = Number(params.get("id")) || 1;
 const product =
     getProductById(productId) || products[0];
+    // ============================
+// RECENTLY VIEWED
+// ============================
+
+let recentlyViewed =
+    getRecentlyViewed();
+
+// Remove the product if it's already present
+recentlyViewed =
+    recentlyViewed.filter(
+        item => item.id !== product.id
+    );
+
+// Add current product to the beginning
+recentlyViewed.unshift(product);
+
+// Keep only the latest 8 products
+recentlyViewed =
+    recentlyViewed.slice(0, 8);
+
+// Save to localStorage
+saveRecentlyViewed(recentlyViewed);
 const relatedProducts =
     getRelatedProducts(product.id);
 
@@ -237,3 +259,66 @@ document
         addToCart
     );
 updateCartCount();
+// ============================
+// WISHLIST
+// ============================
+
+const wishlistBtn =
+    document.getElementById("wishlistBtn");
+
+let wishlist =
+    getWishlist();
+
+updateWishlistButton();
+
+wishlistBtn.addEventListener(
+    "click",
+    toggleWishlist
+);
+
+function toggleWishlist(){
+
+    const index =
+        wishlist.findIndex(
+            item => item.id === product.id
+        );
+
+    if(index > -1){
+
+        wishlist.splice(index,1);
+
+        showToast(
+            "Removed from Wishlist"
+        );
+
+    }else{
+
+        wishlist.push(product);
+
+        showToast(
+            "Added to Wishlist ❤️"
+        );
+
+    }
+
+    saveWishlist(wishlist);
+
+    updateWishlistCount();
+
+    updateWishlistButton();
+
+}
+
+function updateWishlistButton(){
+
+    const exists =
+        wishlist.some(
+            item => item.id === product.id
+        );
+
+    wishlistBtn.textContent =
+        exists
+        ? "❤️ Remove from Wishlist"
+        : "♡ Add to Wishlist";
+
+}
