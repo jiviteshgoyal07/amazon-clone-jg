@@ -187,6 +187,17 @@ body {
     margin-right:3px;
     align-self:flex-start;
 }
+.wishlist-count{
+
+    color:#F08804;
+
+    font-size:15px;
+
+    font-weight:700;
+
+    margin-left:5px;
+
+}
 .cart-text {
     font-size: 0.875rem;
     font-weight: bold;
@@ -406,4 +417,16 @@ z-index:9999;
 .toast.show{
 opacity:1;
 transform:translateY(0);
+}
+.navbar a{
+    color: white;
+    text-decoration: none;
+}
+
+.navbar a:visited{
+    color: white;
+}
+
+.navbar a:hover{
+    color: white;
 }

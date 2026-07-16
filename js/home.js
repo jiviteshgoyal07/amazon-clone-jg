@@ -124,15 +124,6 @@ if (
 
 <a href="product.html?id=${product.id}" class="rv-card">
 
-    <div
-        class="wishlist-icon"
-        data-id="${product.id}"
-    >
-
-        ♡
-
-    </div>
-
     <div class="rv-image">
 
         <img src="${product.images[0]}">
@@ -168,6 +159,9 @@ if (
     </div>
 
 </a>
+
+`;
+
     });
 
 } else if (recentlyViewedSlider) {

@@ -3,62 +3,96 @@
 // Shared functionality for all pages
 // ==========================================
 
-// ===============================
-// UPDATE NAVBAR CART COUNT
-// ===============================
-
-function updateCartCount() {
-
-    const cartCount =
-        document.getElementById("cartCount");
-
-    if (!cartCount) return;
-
-    const cart =
-        getCart();
-
-    cartCount.textContent =
-        getTotalQuantity(cart);
-
-}
-
-updateCartCount();
 
 
-// ===============================
-// BACK TO TOP
-// ===============================
+// ==========================================
+// LOAD SHARED COMPONENTS
+// ==========================================
 
-function initializeBackToTop() {
+async function loadComponent(id, file) {
 
-    const backToTop =
-        document.querySelector(".back-to-top");
+    const element =
+        document.getElementById(id);
 
-    if (!backToTop) return;
+    if (!element) return;
 
-    backToTop.addEventListener("click", () => {
+    try {
 
-        window.scrollTo({
+        const response =
+            await fetch(file);
 
-            top: 0,
+        if (!response.ok) {
 
-            behavior: "smooth"
+            throw new Error(
+                `Unable to load ${file}`
+            );
 
-        });
+        }
 
-    });
+        element.innerHTML =
+            await response.text();
+
+    }
+
+    catch (error) {
+
+        console.error(error);
+
+    }
 
 }
 
-// ===============================
-// NAVBAR EVENTS
-// ===============================
+
+
+// ==========================================
+// INITIALIZE COMMON LAYOUT
+// ==========================================
+
+async function initializeLayout() {
+
+    await loadComponent(
+        "navbar-container",
+        "components/navbar.html"
+    );
+
+    await loadComponent(
+        "footer-container",
+        "components/footer.html"
+    );
+
+    initializeNavbar();
+
+    initializeBackToTop();
+
+    updateCartCount();
+
+    updateWishlistCount();
+
+}
+
+document.addEventListener(
+    "DOMContentLoaded",
+    initializeLayout
+);
+
+
+
+// ==========================================
+// NAVBAR
+// ==========================================
 
 function initializeNavbar() {
 
     initializeSearch();
 
 }
+
+
+
+// ==========================================
+// SEARCH
+// ==========================================
+
 function initializeSearch() {
 
     const input =
@@ -71,9 +105,10 @@ function initializeSearch() {
 
     function performSearch() {
 
-        const query = input.value.trim();
+        const query =
+            input.value.trim();
 
-        if (query === "") return;
+        if (!query) return;
 
         window.location.href =
             `search.html?q=${encodeURIComponent(query)}`;
@@ -100,9 +135,62 @@ function initializeSearch() {
 
 }
 
-// ============================
+
+
+// ==========================================
+// BACK TO TOP
+// ==========================================
+
+function initializeBackToTop() {
+
+    const backToTop =
+        document.querySelector(".back-to-top");
+
+    if (!backToTop) return;
+
+    backToTop.addEventListener(
+        "click",
+        () => {
+
+            window.scrollTo({
+
+                top: 0,
+
+                behavior: "smooth"
+
+            });
+
+        }
+    );
+
+}
+
+
+
+// ==========================================
+// CART
+// ==========================================
+
+function updateCartCount() {
+
+    const cartCount =
+        document.getElementById("cartCount");
+
+    if (!cartCount) return;
+
+    const cart =
+        getCart();
+
+    cartCount.textContent =
+        getTotalQuantity(cart);
+
+}
+
+
+
+// ==========================================
 // WISHLIST
-// ============================
+// ==========================================
 
 function getWishlist() {
 
@@ -123,31 +211,39 @@ function saveWishlist(wishlist) {
 
 function updateWishlistCount() {
 
-    const wishlist =
-        getWishlist();
-
     const badge =
         document.getElementById("wishlistCount");
 
     if (!badge) return;
 
-    badge.textContent =
-        wishlist.length;
+    const count = getWishlist().length;
+
+    badge.textContent = count;
+
+    badge.style.display =
+        count > 0 ? "inline" : "none";
 
 }
-// ============================
+
+
+
+// ==========================================
 // RECENTLY VIEWED
-// ============================
+// ==========================================
 
 function getRecentlyViewed() {
+
     return JSON.parse(
         localStorage.getItem("recentlyViewed")
     ) || [];
+
 }
 
 function saveRecentlyViewed(items) {
+
     localStorage.setItem(
         "recentlyViewed",
         JSON.stringify(items)
     );
+
 }
