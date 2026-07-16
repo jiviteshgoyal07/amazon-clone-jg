@@ -1,34 +1,333 @@
 body{
 
-    background:#eaeded;
+background:#eaeded;
 
 }
 
 .checkout-page{
 
-    max-width:1500px;
+max-width:1500px;
 
-    margin:30px auto;
+margin:30px auto;
 
-    padding:0 20px;
+padding:0 20px;
 
-    display:grid;
+display:grid;
 
-    grid-template-columns:2fr 1fr;
+grid-template-columns:2fr 1fr;
 
-    gap:24px;
+gap:24px;
+
+align-items:start;
 
 }
 
-.checkout-left,
+.checkout-card,
+.summary-card{
+
+background:white;
+
+border-radius:10px;
+
+padding:24px;
+
+box-shadow:0 1px 3px rgba(15,17,17,.08);
+
+}
+
+.checkout-left{
+
+display:flex;
+
+flex-direction:column;
+
+gap:20px;
+
+}
+
 .checkout-right{
 
-    background:white;
+position:sticky;
 
-    border-radius:8px;
+top:20px;
 
-    padding:24px;
+}
 
-    box-shadow:0 1px 3px rgba(15,17,17,.08);
+/* ==========================================
+   CHECKOUT HEADER
+========================================== */
+
+.checkout-heading{
+
+    font-size:36px;
+
+    font-weight:500;
+
+}
+
+/* ==========================================
+   CARD HEADER
+========================================== */
+
+.card-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:20px;
+
+}
+
+.card-header h2{
+
+    font-size:24px;
+
+    font-weight:500;
+
+}
+
+/* ==========================================
+   CHANGE BUTTON
+========================================== */
+
+.change-btn{
+
+    background:none;
+
+    border:none;
+
+    color:#007185;
+
+    cursor:pointer;
+
+    font-size:15px;
+
+}
+
+.change-btn:hover{
+
+    text-decoration:underline;
+
+}
+
+/* ==========================================
+   ADDRESS
+========================================== */
+
+.address-box{
+
+    line-height:1.8;
+
+}
+
+.address-box h3{
+
+    font-size:22px;
+
+    margin-bottom:8px;
+
+}
+
+.address-box p{
+
+    color:#565959;
+
+    font-size:16px;
+
+}
+/* ==========================================
+   SECTION TITLE
+========================================== */
+
+.section-title{
+
+    font-size:24px;
+
+    font-weight:500;
+
+    margin-bottom:22px;
+
+}
+
+/* ==========================================
+   DELIVERY OPTIONS
+========================================== */
+
+.delivery-option{
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:15px;
+
+    padding:18px;
+
+    border:1px solid #ddd;
+
+    border-radius:10px;
+
+    margin-bottom:16px;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+.delivery-option:hover{
+
+    border-color:#f08804;
+
+    background:#fffaf3;
+
+}
+
+.delivery-option input{
+
+    margin-top:5px;
+
+    transform:scale(1.2);
+
+}
+
+.delivery-option label{
+
+    display:flex;
+
+    flex-direction:column;
+
+    cursor:pointer;
+
+    gap:6px;
+
+}
+
+.delivery-option strong{
+
+    font-size:18px;
+
+    font-weight:600;
+
+}
+
+.delivery-option span{
+
+    color:#007600;
+
+    font-weight:700;
+
+}
+
+.delivery-option small{
+
+    color:#565959;
+
+    font-size:14px;
+
+}
+
+.summary-heading{
+
+    font-size:24px;
+
+    margin-bottom:20px;
+
+    font-weight:600;
+
+}
+
+.summary-row{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    margin-bottom:14px;
+
+    font-size:16px;
+
+}
+
+.summary-row span:last-child{
+
+    font-weight:600;
+
+}
+
+/* ==========================================
+   REVIEW ITEMS
+========================================== */
+
+.review-item{
+
+    display:grid;
+
+    grid-template-columns:110px 1fr 110px;
+
+    gap:20px;
+
+    padding:20px 0;
+
+    border-bottom:1px solid #e7e7e7;
+
+    align-items:center;
+
+}
+
+.review-item:last-child{
+
+    border-bottom:none;
+
+}
+
+.review-item img{
+
+    width:90px;
+
+    height:90px;
+
+    object-fit:contain;
+
+}
+
+.review-details{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:8px;
+
+}
+
+.review-title{
+
+    font-size:18px;
+
+    line-height:1.4;
+
+    font-weight:500;
+
+}
+
+.review-qty{
+
+    color:#565959;
+
+    font-size:14px;
+
+}
+
+.review-price{
+
+    text-align:right;
+
+    font-size:22px;
+
+    font-weight:700;
 
 }

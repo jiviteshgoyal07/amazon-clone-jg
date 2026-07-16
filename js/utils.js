@@ -108,3 +108,26 @@ function showToast(message) {
     }, 2000);
 
 }
+
+// ===============================
+// ORDER UTILITIES
+// ===============================
+
+function generateOrderId(){
+
+    return "ORD-" +
+        Date.now().toString();
+
+}
+
+function formatOrderDate(){
+
+    return new Date().toLocaleString(
+        "en-IN",
+        {
+            dateStyle:"medium",
+            timeStyle:"short"
+        }
+    );
+
+}
