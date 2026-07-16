@@ -138,24 +138,63 @@
     </div>
     <!-- Panel Ends here -->
     <main class="cart-page">
+
         <section class="cart-left">
+
             <h1>Shopping Cart</h1>
+
+            <hr class="cart-divider">
+
             <div id="cartItems"></div>
+
         </section>
+
         <aside class="cart-right">
+
             <div class="summary-card">
-                <h2>Order Summary</h2>
-                <p>
+
+                <h2 class="summary-title">
                     Subtotal (<span id="totalItems">0</span> items)
+                </h2>
+
+                <h3 id="subtotal">$0</h3>
+
+                <p class="summary-delivery">
+                    ✓ FREE Delivery
                 </p>
-                <h3>
-                    <span id="subtotal">$0</span>
-                </h3>
+
+                <hr class="summary-divider">
+
+                <div class="summary-total">
+
+                    <span>Order Total</span>
+
+                    <span id="summaryTotal">$0</span>
+
+                </div>
+
                 <button class="checkout-btn">
+
                     Proceed to Checkout
+
                 </button>
+
             </div>
+
+            <section class="saved-section">
+
+                <h2 class="saved-heading">
+
+                    Saved for later
+
+                </h2>
+
+                <div id="savedItems"></div>
+
+            </section>
+
         </aside>
+
     </main>
 
     <footer>

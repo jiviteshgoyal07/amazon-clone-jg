@@ -5,6 +5,11 @@
 const cartData =
     JSON.parse(localStorage.getItem("cart")) || [];
 
+
+
+const savedItems =
+    JSON.parse(localStorage.getItem("savedItems")) || [];
+
 // Upgrade old cart items (without quantity)
 cartData.forEach(item => {
     if (!item.quantity) {
@@ -141,17 +146,17 @@ function renderCart() {
     <select class="qty-select" data-id="${item.id}">
 
         ${Array.from(
-    {
-        length: Math.max(10, item.quantity)
-    },
-    (_, i) => `
+            {
+                length: Math.max(10, item.quantity)
+            },
+            (_, i) => `
         <option
             value="${i + 1}"
             ${item.quantity === i + 1 ? "selected" : ""}>
             Qty: ${i + 1}
         </option>
 `
-).join("")}
+        ).join("")}
 
     </select>
 
@@ -196,6 +201,16 @@ function renderCart() {
     subtotal.textContent =
         formatPrice(total);
 
+    const summaryTotal =
+        document.getElementById("summaryTotal");
+
+    if (summaryTotal) {
+
+        summaryTotal.textContent =
+            formatPrice(total);
+
+    }
+
     totalItems.textContent =
         totalQuantity;
 
@@ -205,8 +220,154 @@ function renderCart() {
 
     addEvents();
 
-}
+    renderSavedItems();
 
+}
+function renderSavedItems() {
+
+    const savedContainer =
+        document.getElementById("savedItems");
+
+    if (!savedContainer) return;
+
+    savedContainer.innerHTML = "";
+
+    if (savedItems.length === 0) {
+
+        savedContainer.innerHTML =
+            "<p>No saved items.</p>";
+
+        return;
+
+    }
+
+    savedItems.forEach(item => {
+
+        const image =
+            item.images?.[0] || item.image;
+
+        savedContainer.innerHTML += `
+
+<div class="saved-item">
+
+    <img src="${image}">
+
+    <div class="saved-info">
+
+        <h3>${item.name}</h3>
+
+        <p>${formatPrice(item.price)}</p>
+
+        <button
+            class="move-btn"
+            data-id="${item.id}">
+            Move to Cart
+        </button>
+
+        <button
+            class="saved-delete-btn"
+            data-id="${item.id}">
+            Delete
+        </button>
+
+    </div>
+
+</div>
+
+`;
+
+    });
+    addSavedEvents();
+
+}
+function addSavedEvents() {
+
+    // Move To Cart
+
+    document.querySelectorAll(".move-btn")
+        .forEach(btn => {
+
+            btn.onclick = () => {
+
+                const id =
+                    Number(btn.dataset.id);
+
+                const index =
+                    savedItems.findIndex(
+                        item => item.id === id
+                    );
+
+                if (index === -1) return;
+
+                const item = savedItems[index];
+
+                const existing =
+                    cartData.find(
+                        product => product.id === id
+                    );
+
+                if (existing) {
+
+                    existing.quantity += item.quantity;
+
+                }
+
+                else {
+
+                    cartData.push(item);
+
+                }
+
+                savedItems.splice(index, 1);
+
+                saveCart();
+
+                localStorage.setItem(
+                    "savedItems",
+                    JSON.stringify(savedItems)
+                );
+
+                renderCart();
+
+                renderSavedItems();
+
+            };
+
+        });
+
+
+
+    // Delete Saved Item
+
+    document.querySelectorAll(".saved-delete-btn")
+        .forEach(btn => {
+
+            btn.onclick = () => {
+
+                const id =
+                    Number(btn.dataset.id);
+
+                const index =
+                    savedItems.findIndex(
+                        item => item.id === id
+                    );
+
+                if (index === -1) return;
+
+                savedItems.splice(index, 1);
+
+                localStorage.setItem(
+                    "savedItems",
+                    JSON.stringify(savedItems)
+                );
+
+                renderSavedItems();
+
+            };
+
+        });
+
+}
 // ===============================
 // BUTTON EVENTS
 // ===============================
@@ -214,23 +375,23 @@ function renderCart() {
 function addEvents() {
 
     document.querySelectorAll(".qty-select")
-.forEach(select=>{
+        .forEach(select => {
 
-    select.addEventListener("change",()=>{
+            select.addEventListener("change", () => {
 
-        const id=Number(select.dataset.id);
+                const id = Number(select.dataset.id);
 
-        const item=
-        cartData.find(p=>p.id===id);
+                const item =
+                    cartData.find(p => p.id === id);
 
-        item.quantity=
-        Number(select.value);
+                item.quantity =
+                    Number(select.value);
 
-        renderCart();
+                renderCart();
 
-    });
+            });
 
-});
+        });
 
     // ---------- DELETE ----------
 
@@ -252,10 +413,48 @@ function addEvents() {
 
     });
 
+    document.querySelectorAll(".save-btn")
+        .forEach(btn => {
+
+            btn.onclick = () => {
+
+                const id =
+                    Number(btn.dataset.id);
+
+                const index =
+                    cartData.findIndex(
+                        item => item.id === id
+                    );
+
+                if (index === -1) return;
+
+                savedItems.push(cartData[index]);
+
+                cartData.splice(index, 1);
+
+                saveCart();
+
+                localStorage.setItem(
+                    "savedItems",
+                    JSON.stringify(savedItems)
+                );
+
+                renderCart();
+
+                renderSavedItems();
+
+            };
+
+        });
+
+
+
 }
+
 
 // ===============================
 // INITIAL LOAD
 // ===============================
 
 renderCart();
+renderSavedItems();
