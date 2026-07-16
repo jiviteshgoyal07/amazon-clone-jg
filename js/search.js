@@ -31,9 +31,96 @@ function renderProducts() {
 
         resultsContainer.innerHTML += `
 
-        <!-- YOUR ENTIRE SEARCH CARD HTML -->
+<div class="search-card">
 
-        `;
+    <a href="product.html?id=${product.id}" class="search-image">
+
+        <img src="${product.images[0]}">
+
+    </a>
+
+    <div class="search-info">
+
+        <a href="product.html?id=${product.id}" class="search-title">
+
+            ${product.name}
+
+        </a>
+
+        <div class="search-rating">
+
+            ⭐⭐⭐⭐⭐
+            <span>${product.rating}</span>
+
+            (${product.reviews.toLocaleString()})
+
+        </div>
+
+        <div class="search-price-row">
+
+            <span class="current-price">
+
+                ${formatPrice(product.price)}
+
+            </span>
+
+            <span class="mrp">
+
+                M.R.P.
+
+                <del>${formatPrice(product.mrp)}</del>
+
+            </span>
+
+        </div>
+
+        <div class="discount">
+
+            Save ${product.discount}%
+
+        </div>
+
+        <div class="prime">
+
+            ✔ Prime
+
+        </div>
+
+        <div class="delivery">
+
+            FREE Delivery Tomorrow
+
+        </div>
+
+        <div class="search-stock">
+
+            ${product.stock ? "In Stock" : "Out of Stock"}
+
+        </div>
+
+        <div class="search-buttons">
+
+            <button
+                class="add-cart-btn"
+                data-id="${product.id}"
+            >
+                Add to Cart
+            </button>
+
+            <a
+                href="product.html?id=${product.id}"
+                class="view-product-btn"
+            >
+                View Product
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+`;
 
     });
 
@@ -121,15 +208,15 @@ function applyFilters() {
 }
 
 document
-.querySelectorAll(".category-filter")
-.forEach(filter => {
+    .querySelectorAll(".category-filter")
+    .forEach(filter => {
 
-    filter.addEventListener(
-        "change",
-        applyFilters
-    );
+        filter.addEventListener(
+            "change",
+            applyFilters
+        );
 
-});
+    });
 
 const sortSelect =
     document.getElementById("sortSelect");
