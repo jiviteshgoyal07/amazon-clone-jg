@@ -32,13 +32,15 @@ body{
     margin-bottom:25px;
     color:#565959;
 }
-.success-card button{
+.view-orders-btn{
     padding:12px 28px;
     border:none;
     border-radius:999px;
     background:#ffd814;
     cursor:pointer;
 }
+
+
 /* =========================================================
    RESPONSIVE DESIGN
 ========================================================= */

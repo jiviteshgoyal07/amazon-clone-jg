@@ -400,24 +400,7 @@ body {
     margin-left:4px;
     font-size:11px;
 }
-.toast{
-position:fixed;
-bottom:30px;
-right:30px;
-background:#131921;
-color:white;
-padding:14px 22px;
-border-radius:8px;
-font-size:15px;
-opacity:0;
-transform:translateY(20px);
-transition:.3s;
-z-index:9999;
-}
-.toast.show{
-opacity:1;
-transform:translateY(0);
-}
+
 .navbar a{
     color: white;
     text-decoration: none;
@@ -708,6 +691,159 @@ transform:translateY(0);
     .footer-bottom-links{
         flex-direction:column;
         gap:8px;
+    }
+
+}
+/*==============================
+        MODERN MINI TOAST
+==============================*/
+
+.toast{
+
+    position:fixed;
+
+    top:20px;
+
+    right:20px;
+
+    width:290px;
+
+    background:#fff;
+
+    border-radius:14px;
+
+    box-shadow:0 14px 35px rgba(0,0,0,.18);
+
+    overflow:hidden;
+
+    opacity:0;
+
+    transform:translateX(120%);
+
+    transition:.35s ease;
+
+    z-index:9999;
+
+}
+
+.toast.show{
+
+    opacity:1;
+
+    transform:translateX(0);
+
+}
+
+.toast-body{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    padding:14px 16px;
+
+}
+
+.toast-icon{
+
+    width:34px;
+
+    height:34px;
+
+    flex-shrink:0;
+
+    border-radius:50%;
+
+    background:#067D62;
+
+    color:#fff;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:17px;
+
+    font-weight:bold;
+
+}
+
+.toast-info{
+
+    flex:1;
+
+    min-width:0;
+
+}
+
+.toast-title{
+
+    font-size:15px;
+
+    font-weight:700;
+
+    color:#111;
+
+}
+
+.toast-message{
+
+    margin-top:3px;
+
+    font-size:13px;
+
+    color:#666;
+
+    white-space:nowrap;
+
+    overflow:hidden;
+
+    text-overflow:ellipsis;
+
+}
+
+.toast-progress{
+
+    height:3px;
+
+    background:#067D62;
+
+    transform-origin:left;
+
+    animation:toastProgress 3s linear forwards;
+
+}
+
+@keyframes toastProgress{
+
+    from{
+
+        transform:scaleX(1);
+
+    }
+
+    to{
+
+        transform:scaleX(0);
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .toast{
+
+        width:calc(100% - 24px);
+
+        left:12px;
+
+        right:12px;
+
     }
 
 }

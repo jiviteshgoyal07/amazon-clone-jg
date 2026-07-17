@@ -83,7 +83,12 @@ function formatPrice(price) {
 // TOAST MESSAGE
 // ===============================
 
-function showToast(message) {
+function showToast({
+    type = "success",
+    title = "",
+    message = "",
+    action = null
+}) {
 
     let toast = document.querySelector(".toast");
 
@@ -97,15 +102,53 @@ function showToast(message) {
 
     }
 
-    toast.textContent = message;
+    const icon = {
+        success: "✓",
+        error: "✕",
+        info: "ℹ",
+        warning: "!"
+    };
 
+   toast.innerHTML = `
+<div class="toast-body">
+
+    <div class="toast-icon">
+        ${icon[type] || "✓"}
+    </div>
+
+    <div class="toast-info">
+
+        <div class="toast-title">
+            ${title}
+        </div>
+
+        ${
+            message
+            ? `<div class="toast-message">
+                    ${
+                        message.length > 32
+                        ? message.substring(0,32) + "..."
+                        : message
+                    }
+               </div>`
+            : ""
+        }
+
+    </div>
+
+</div>
+
+<div class="toast-progress"></div>
+`;
     toast.classList.add("show");
 
-    setTimeout(() => {
+    clearTimeout(toast.hideTimer);
+
+    toast.hideTimer = setTimeout(() => {
 
         toast.classList.remove("show");
 
-    }, 2000);
+    }, 3000);
 
 }
 

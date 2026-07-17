@@ -183,7 +183,15 @@ document.addEventListener("click", (event) => {
 
     updateCartCount();
 
-    showToast("Added to Cart");
+    showToast({
+    type: "success",
+    title: "Added to Cart",
+    message: product.name,
+    action: {
+        text: "View Cart →",
+        href: "cart.html"
+    }
+});
 
 });
 

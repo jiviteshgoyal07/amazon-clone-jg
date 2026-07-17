@@ -114,6 +114,41 @@ const mainImage =
 mainImage.src = product.images[0];
 mainImage.alt = product.name;
 // ============================
+// PRODUCT IMAGE ZOOM
+// ============================
+
+const zoomContainer =
+    document.querySelector(".image-zoom-container");
+
+zoomContainer.addEventListener("mousemove",(e)=>{
+
+    const rect =
+        zoomContainer.getBoundingClientRect();
+
+    const x =
+        ((e.clientX - rect.left) / rect.width) * 100;
+
+    const y =
+        ((e.clientY - rect.top) / rect.height) * 100;
+
+    mainImage.style.transformOrigin =
+        `${x}% ${y}%`;
+
+    mainImage.style.transform =
+        "scale(1.3)";
+
+});
+
+zoomContainer.addEventListener("mouseleave",()=>{
+
+    mainImage.style.transform =
+        "scale(1)";
+
+    mainImage.style.transformOrigin =
+        "center";
+
+});
+// ============================
 // GALLERY
 // ============================
 const thumbnails = document.querySelectorAll(".thumb");
@@ -246,7 +281,15 @@ function addToCart() {
     saveCurrentCart();
     updateCartCount();
 
-    showToast("Added to Cart");
+    showToast({
+    type: "success",
+    title: "Added to Cart",
+    message: product.name,
+    action: {
+        text: "View Cart →",
+        href: "cart.html"
+    }
+});
 
     // Update the shared cart data used by common.js
     updateCartCount();
@@ -287,17 +330,25 @@ function toggleWishlist(){
 
         wishlist.splice(index,1);
 
-        showToast(
-            "Removed from Wishlist"
-        );
+        showToast({
+    type: "info",
+    title: "Removed from Wishlist",
+    message: product.name
+});
 
     }else{
 
         wishlist.push(product);
 
-        showToast(
-            "Added to Wishlist ❤️"
-        );
+        showToast({
+    type: "success",
+    title: "Added to Wishlist",
+    message: product.name,
+    action: {
+        text: "View Wishlist →",
+        href: "wishlist.html"
+    }
+});
 
     }
 
