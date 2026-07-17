@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🛒 mazon Clone – Multi-Page E-Commerce Frontend
+# 🛒 Amazon Clone – Multi-Page E-Commerce Frontend
 
 A modern **Amazon-inspired multi-page e-commerce frontend** built using **HTML5, CSS3, and JavaScript**.
 
