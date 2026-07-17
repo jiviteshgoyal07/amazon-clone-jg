@@ -13,17 +13,13 @@ body{
 =========================== */
 
 .search-page{
-
     max-width:1450px;
     margin:30px auto;
     padding:0 20px;
-
     display:grid;
     grid-template-columns:280px 1fr;
     gap:30px;
-
     align-items: start;
-
 }
 
 /* ===========================
@@ -31,53 +27,38 @@ body{
 =========================== */
 
 .search-sidebar{
-
     background:#fff;
     border-radius:10px;
     padding:22px;
-
     height:fit-content;
-
     position:sticky;
     top:20px;
-
     box-shadow:0 2px 8px rgba(0,0,0,.08);
-
 }
 
 .search-sidebar h2{
-
     font-size:22px;
     margin-bottom:30px;
-
 }
 
 .filter-group{
-
     margin-bottom:35px;
-
 }
 
 .filter-group h3{
-
     font-size:20px;
     margin-bottom:18px;
-
 }
 
 .filter-group label{
-
     display:block;
     margin-bottom:14px;
     cursor:pointer;
     font-size:17px;
-
 }
 
 .filter-group input{
-
     margin-right:8px;
-
 }
 
 /* ===========================
@@ -85,28 +66,21 @@ body{
 =========================== */
 
 .results-section{
-
     display:flex;
     flex-direction:column;
     width: 100%;
-
 }
 
 .search-header{
-
     display:flex;
     justify-content:space-between;
     align-items:center;
-
     margin-bottom:25px;
-
 }
 
 #searchTitle{
-
     font-size:30px;
     font-weight:700;
-
 }
 
 /* ===========================
@@ -114,27 +88,17 @@ body{
 =========================== */
 
 #sortSelect{
-
     width:190px;
-
     padding:10px 14px;
-
     border:1px solid #d5d9d9;
-
     border-radius:8px;
-
     background:#fff;
-
     font-size:15px;
-
     cursor:pointer;
-
 }
 
 #sortSelect:hover{
-
     border-color:#f08804;
-
 }
 
 /* ===========================
@@ -142,12 +106,9 @@ body{
 =========================== */
 
 #searchResults{
-
     display:flex;
     flex-direction:column;
-
     gap:20px;
-
 }
 
 /* ===========================
@@ -155,31 +116,19 @@ body{
 =========================== */
 
 .search-card{
-
     display:flex;
-
     gap:30px;
-
     background:#fff;
-
     border-radius:10px;
-
     padding:22px;
-
     border:1px solid #e7e7e7;
-
     transition:.25s;
-
     box-shadow:0 2px 8px rgba(0,0,0,.06);
-
 }
 
 .search-card:hover{
-
     transform:translateY(-2px);
-
     box-shadow:0 8px 20px rgba(0,0,0,.12);
-
 }
 
 /* ===========================
@@ -187,27 +136,18 @@ body{
 =========================== */
 
 .search-image{
-
     text-decoration:none;
-
 }
 
 .search-image img{
-
     width:180px;
-
     height:180px;
-
     object-fit:contain;
-
     transition:.3s;
-
 }
 
 .search-card:hover .search-image img{
-
     transform:scale(1.05);
-
 }
 
 /* ===========================
@@ -215,37 +155,23 @@ body{
 =========================== */
 
 .search-info{
-
     flex:1;
-
     display:flex;
-
     flex-direction:column;
-
     justify-content:center;
-
 }
 
 .search-title{
-
     text-decoration:none;
-
     color:#111;
-
     font-size:20px;
-
     font-weight:500;
-
     line-height:1.45;
-
     margin-bottom:12px;
-
 }
 
 .search-title:hover{
-
     color:#C7511F;
-
 }
 
 /* ===========================
@@ -253,19 +179,13 @@ body{
 =========================== */
 
 .search-rating{
-
     color:#007185;
-
     font-size:16px;
-
     margin-bottom:12px;
-
 }
 
 .search-rating span{
-
     font-weight:600;
-
 }
 
 /* ===========================
@@ -273,45 +193,28 @@ body{
 =========================== */
 
 .search-price-row{
-
     display:flex;
-
     align-items:flex-end;
-
     gap:14px;
-
     margin-bottom:8px;
-
 }
 
 .current-price{
-
     font-size:34px;
-
     color:#B12704;
-
     font-weight:700;
-
 }
 
 .mrp{
-
     color:#565959;
-
     font-size:18px;
-
 }
 
 .discount{
-
     color:#CC0C39;
-
     font-size:18px;
-
     font-weight:700;
-
     margin-bottom:10px;
-
 }
 
 /* ===========================
@@ -319,105 +222,63 @@ body{
 =========================== */
 
 .prime{
-
     color:#007185;
-
     font-weight:600;
-
     margin-bottom:5px;
-
 }
 
 .delivery{
-
     color:#007600;
-
     font-size:16px;
-
     font-weight:600;
-
     margin-bottom:8px;
-
 }
 
 .search-stock{
-
     color:#007600;
-
     font-size:16px;
-
     font-weight:700;
-
     margin-bottom:18px;
-
 }
-
 /* ===========================
    BUTTONS
 =========================== */
 
 .search-buttons{
-
     display:flex;
-
     gap:14px;
-
     margin-top:5px;
-
 }
 
 .add-cart-btn{
-
     background:#FFD814;
-
     border:none;
-
     border-radius:999px;
-
     padding:10px 22px;
-
     cursor:pointer;
-
     font-size:15px;
-
     font-weight:700;
-
     transition:.2s;
-
 }
 
 .add-cart-btn:hover{
-
     background:#F7CA00;
-
 }
 
 .view-product-btn{
-
     background:#fff;
-
     color:#111;
-
     border:1px solid #d5d9d9;
-
     border-radius:999px;
-
     padding:10px 22px;
-
     text-decoration:none;
-
     font-size:15px;
-
     font-weight:600;
-
     transition:.2s;
-
 }
 
 .view-product-btn:hover{
-
     background:#f7fafa;
-
 }
 
 /* ===========================
@@ -425,87 +286,196 @@ body{
 =========================== */
 
 #searchResults h2{
-
     background:#fff;
-
     padding:40px;
-
     border-radius:10px;
-
     text-align:center;
-
     box-shadow:0 2px 8px rgba(0,0,0,.08);
-
 }
 
-/* ===========================
-   RESPONSIVE
-=========================== */
+/* =========================================================
+   RESPONSIVE DESIGN
+========================================================= */
+/* =========================================================
+   LAPTOP
+========================================================= */
 
-@media(max-width:1000px){
+@media (max-width:1400px){
+    .search-page{
+        max-width:100%;
+        padding:0 15px;
+        gap:25px;
+        grid-template-columns:250px 1fr;
+    }
+    .search-card{
+        gap:25px;
+    }
+}
+/* =========================================================
+   TABLET
+========================================================= */
 
-.search-page{
+@media (max-width:992px){
+    .search-page{
+        grid-template-columns:1fr;
+        margin:20px auto;
+        gap:20px;
+    }
+    .search-sidebar{
+        position:static;
+        width:100%;
+        padding:18px;
+    }
+    .filter-group{
+        margin-bottom:25px;
+    }
+    .search-header{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:15px;
+    }
+    #searchTitle{
+        font-size:28px;
+    }
+    #sortSelect{
+        width:220px;
+    }
+}
+/* =========================================================
+   MOBILE
+========================================================= */
 
-    grid-template-columns:1fr;
-
+@media (max-width:768px){
+    .search-page{
+        padding:0 12px;
+        margin:15px auto;
+    }
+    .search-sidebar{
+        padding:15px;
+    }
+    .search-sidebar h2{
+        font-size:20px;
+        margin-bottom:20px;
+    }
+    .filter-group h3{
+        font-size:18px;
+    }
+    .filter-group label{
+        font-size:15px;
+        margin-bottom:10px;
+    }
+    .search-header{
+        gap:12px;
+    }
+    #searchTitle{
+        font-size:24px;
+    }
+    #sortSelect{
+        width:100%;
+    }
+    .search-card{
+        flex-direction:column;
+        align-items:center;
+        text-align:center;
+        gap:18px;
+        padding:18px;
+    }
+    .search-image img{
+        width:170px;
+        height:170px;
+    }
+    .search-info{
+        align-items:center;
+    }
+    .search-title{
+        font-size:20px;
+        margin-bottom:10px;
+    }
+    .search-rating{
+        font-size:15px;
+    }
+    .search-price-row{
+        justify-content:center;
+        flex-wrap:wrap;
+        gap:10px;
+    }
+    .current-price{
+        font-size:30px;
+    }
+    .mrp,
+    .discount{
+        font-size:16px;
+    }
+    .delivery,
+    .search-stock{
+        font-size:15px;
+    }
+    .search-buttons{
+        justify-content:center;
+        flex-wrap:wrap;
+        width:100%;
+        gap:10px;
+    }
+    .add-cart-btn,
+    .view-product-btn{
+        width:100%;
+        max-width:300px;
+    }
 }
 
-.search-sidebar{
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
 
-    position:static;
-
-}
-
-.search-header{
-
-    flex-direction:column;
-
-    align-items:flex-start;
-
-    gap:15px;
-
-}
-
-}
-
-@media(max-width:768px){
-
-.search-card{
-
-    flex-direction:column;
-
-    align-items:center;
-
-    text-align:center;
-
-}
-
-.search-image img{
-
-    width:180px;
-
-    height:180px;
-
-}
-
-.search-price-row{
-
-    justify-content:center;
-
-}
-
-.search-buttons{
-
-    justify-content:center;
-
-    flex-wrap:wrap;
-
-}
-
-.search-title{
-
-    font-size:22px;
-
-}
-
+@media (max-width:480px){
+    .search-page{
+        padding:0 10px;
+    }
+    .search-sidebar{
+        padding:12px;
+    }
+    .search-sidebar h2{
+        font-size:18px;
+    }
+    .filter-group h3{
+        font-size:17px;
+    }
+    .filter-group label{
+        font-size:14px;
+    }
+    #searchTitle{
+        font-size:22px;
+    }
+    .search-card{
+        padding:15px;
+        gap:15px;
+    }
+    .search-image img{
+        width:150px;
+        height:150px;
+    }
+    .search-title{
+        font-size:18px;
+        line-height:1.4;
+    }
+    .current-price{
+        font-size:26px;
+    }
+    .mrp,
+    .discount{
+        font-size:14px;
+    }
+    .delivery,
+    .search-stock{
+        font-size:14px;
+    }
+    .add-cart-btn,
+    .view-product-btn{
+        font-size:14px;
+        padding:10px 16px;
+    }
+    #searchResults h2{
+        padding:25px 15px;
+        font-size:20px;
+    }
 }

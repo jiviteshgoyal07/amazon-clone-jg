@@ -122,3 +122,152 @@ body {
 .view-btn:hover {
     background: #F7FAFA;
 }
+/* =========================================================
+   RESPONSIVE DESIGN
+========================================================= */
+
+
+/* =========================================================
+   LAPTOP
+========================================================= */
+
+@media (max-width:1400px){
+
+    .orders-page{
+        max-width:100%;
+        padding:0 15px;
+    }
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width:992px){
+
+    .orders-page{
+        margin:20px auto;
+    }
+
+    .page-title{
+        font-size:30px;
+    }
+
+    .order-header{
+        grid-template-columns:repeat(2,1fr);
+        gap:20px;
+    }
+
+    .order-header > div:last-child{
+        grid-column:1/-1;
+    }
+
+    .order-items{
+        padding:18px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width:768px){
+
+    .orders-page{
+        padding:0 12px;
+        margin:15px auto;
+    }
+
+    .page-title{
+        font-size:26px;
+    }
+
+    .order-header{
+        display:flex;
+        flex-direction:column;
+        align-items:flex-start;
+        gap:15px;
+        padding:18px;
+    }
+
+    .order-item{
+        flex-direction:column;
+        align-items:center;
+        text-align:center;
+        gap:15px;
+    }
+
+    .order-item img{
+        width:130px;
+        height:130px;
+    }
+
+    .order-info{
+        width:100%;
+    }
+
+    .order-info h3{
+        font-size:18px;
+    }
+
+    .order-actions{
+        width:100%;
+        align-items:center;
+    }
+
+    .buy-again-btn,
+    .view-btn{
+        width:100%;
+        max-width:260px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width:480px){
+
+    .orders-page{
+        padding:0 10px;
+    }
+
+    .page-title{
+        font-size:22px;
+    }
+
+    .order-header{
+        padding:15px;
+    }
+
+    .order-items{
+        padding:15px;
+    }
+
+    .order-item img{
+        width:110px;
+        height:110px;
+    }
+
+    .order-info h3{
+        font-size:16px;
+        line-height:1.5;
+    }
+
+    .order-info p{
+        font-size:14px;
+    }
+
+    .buy-again-btn,
+    .view-btn{
+        font-size:14px;
+        padding:10px 16px;
+    }
+
+}

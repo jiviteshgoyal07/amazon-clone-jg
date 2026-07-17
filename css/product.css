@@ -475,3 +475,304 @@ font-weight:bold;
 .wishlist-btn:hover{
     background:#f7fafa;
 }
+/* =========================================================
+   RESPONSIVE DESIGN
+========================================================= */
+
+
+/* =========================================================
+   LAPTOP
+========================================================= */
+
+@media (max-width:1400px){
+
+    .product-page{
+        grid-template-columns:
+            60px
+            minmax(320px,1fr)
+            minmax(320px,1fr)
+            250px;
+        gap:20px;
+    }
+
+    .product-title{
+        max-width:100%;
+    }
+
+    .buy-box{
+        width:100%;
+    }
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width:992px){
+
+    .breadcrumb{
+        padding:0 15px;
+        font-size:11px;
+        overflow-x:auto;
+        white-space:nowrap;
+    }
+
+    .product-page{
+        grid-template-columns:80px 1fr;
+        gap:20px;
+        padding:15px;
+    }
+
+    .product-thumbnails{
+        position:static;
+    }
+
+    .product-image{
+        position:static;
+    }
+
+    .product-image img{
+        max-width:450px;
+    }
+
+    .product-details{
+        grid-column:1/-1;
+    }
+
+    .buy-box{
+        grid-column:1/-1;
+        position:static;
+        width:100%;
+    }
+
+    .reviews-section{
+        grid-template-columns:1fr;
+        gap:40px;
+        width:100%;
+        padding:40px 20px 0;
+    }
+
+    .bar{
+        width:100%;
+        max-width:220px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width:768px){
+
+    .breadcrumb{
+        display:none;
+    }
+
+    .product-page{
+        display:flex;
+        flex-direction:column;
+        gap:20px;
+        padding:15px;
+    }
+
+    .product-thumbnails{
+        flex-direction:row;
+        overflow-x:auto;
+        gap:10px;
+        order:2;
+        position:static;
+        scrollbar-width:none;
+    }
+
+    .product-thumbnails::-webkit-scrollbar{
+        display:none;
+    }
+
+    .thumb{
+        flex-shrink:0;
+    }
+
+    .product-image{
+        order:1;
+        justify-content:center;
+        padding:0;
+    }
+
+    .product-image img{
+        width:100%;
+        max-width:380px;
+    }
+
+    .product-details{
+        order:3;
+        padding:0;
+    }
+
+    .product-title{
+        font-size:22px;
+        line-height:1.4;
+    }
+
+    .price{
+        font-size:38px;
+    }
+
+    .stock{
+        font-size:24px;
+    }
+
+    .about-title{
+        font-size:20px;
+    }
+
+    .buy-box{
+        order:4;
+        width:100%;
+        position:static;
+        padding:20px;
+    }
+
+    .wishlist-btn,
+    .cart-btn,
+    .buy-btn{
+        width:100%;
+    }
+
+    .related-products{
+        margin:30px 15px;
+        padding:15px;
+    }
+
+    .slider-header h2{
+        font-size:20px;
+    }
+
+    .related-card{
+        min-width:180px;
+    }
+
+    .related-card img{
+        height:150px;
+    }
+
+    .slider-left,
+    .slider-right{
+        display:none;
+    }
+
+    .reviews-section{
+        display:flex;
+        flex-direction:column;
+        gap:35px;
+        margin:40px auto;
+        padding-top:30px;
+    }
+
+    .reviews-summary h2,
+    .reviews-list h2{
+        font-size:24px;
+    }
+
+    .review-title{
+        font-size:17px;
+    }
+
+    .review-footer{
+        flex-wrap:wrap;
+        gap:10px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width:480px){
+
+    .product-page{
+        padding:10px;
+    }
+
+    .thumb{
+        width:55px;
+        height:55px;
+    }
+
+    .product-title{
+        font-size:20px;
+    }
+
+    .price{
+        font-size:32px;
+    }
+
+    .currency{
+        font-size:16px;
+    }
+
+    .cents{
+        font-size:14px;
+    }
+
+    .stock{
+        font-size:22px;
+    }
+
+    .buy-price{
+        font-size:28px;
+    }
+
+    .buy-stock{
+        font-size:20px;
+    }
+
+    .buy-box{
+        padding:15px;
+    }
+
+    .related-products{
+        margin:20px 10px;
+        padding:12px;
+    }
+
+    .related-card{
+        min-width:160px;
+        padding:12px;
+    }
+
+    .related-card img{
+        height:130px;
+    }
+
+    .slider-header h2{
+        font-size:18px;
+    }
+
+    .reviews-summary h2,
+    .reviews-list h2{
+        font-size:22px;
+    }
+
+    .overall-stars{
+        font-size:16px;
+    }
+
+    #overallRating{
+        font-size:20px;
+    }
+
+    .review-title{
+        font-size:16px;
+    }
+
+    .review-text{
+        font-size:14px;
+    }
+
+}

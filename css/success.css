@@ -1,81 +1,133 @@
 body{
-
     background:#eaeded;
-
     display:flex;
-
     justify-content:center;
-
     align-items:center;
-
     height:100vh;
-
 }
-
 .success-card{
-
     background:white;
-
     padding:50px;
-
     border-radius:10px;
-
     text-align:center;
-
     box-shadow:0 1px 4px rgba(0,0,0,.1);
-
 }
-
 .success-icon{
-
     width:80px;
-
     height:80px;
-
     border-radius:50%;
-
     background:#067d62;
-
     color:white;
-
     font-size:40px;
-
     display:flex;
-
     justify-content:center;
-
     align-items:center;
-
     margin:auto;
-
     margin-bottom:25px;
-
 }
-
 .success-card h1{
-
     margin-bottom:15px;
-
 }
-
 .success-card p{
-
     margin-bottom:25px;
-
     color:#565959;
-
 }
-
 .success-card button{
-
     padding:12px 28px;
-
     border:none;
-
     border-radius:999px;
-
     background:#ffd814;
-
     cursor:pointer;
-
+}
+/* =========================================================
+   RESPONSIVE DESIGN
+========================================================= */
+/* =========================================================
+   LAPTOP
+========================================================= */
+@media (max-width:1400px){
+    .success-card{
+        max-width:500px;
+        width:90%;
+    }
+}
+/* =========================================================
+   TABLET
+========================================================= */
+@media (max-width:992px){
+    body{
+        padding:20px;
+    }
+    .success-card{
+        width:100%;
+        max-width:480px;
+        padding:40px;
+    }
+    .success-icon{
+        width:70px;
+        height:70px;
+        font-size:34px;
+    }
+    .success-card h1{
+        font-size:32px;
+    }
+}
+/* =========================================================
+   MOBILE
+========================================================= */
+@media (max-width:768px){
+    body{
+        padding:15px;
+        height:auto;
+        min-height:100vh;
+    }
+    .success-card{
+        width:100%;
+        padding:30px 20px;
+    }
+    .success-icon{
+        width:65px;
+        height:65px;
+        font-size:30px;
+        margin-bottom:20px;
+    }
+    .success-card h1{
+        font-size:28px;
+    }
+    .success-card p{
+        font-size:15px;
+        line-height:1.6;
+    }
+    .success-card button{
+        width:100%;
+        height:46px;
+        font-size:16px;
+    }
+}
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+@media (max-width:480px){
+    body{
+        padding:10px;
+    }
+    .success-card{
+        padding:25px 15px;
+    }
+    .success-icon{
+        width:60px;
+        height:60px;
+        font-size:28px;
+    }
+    .success-card h1{
+        font-size:24px;
+    }
+    .success-card p{
+        font-size:14px;
+    }
+    .success-card button{
+        height:42px;
+        font-size:15px;
+        padding:0 20px;
+    }
 }
