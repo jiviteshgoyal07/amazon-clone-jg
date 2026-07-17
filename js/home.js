@@ -166,6 +166,6 @@ if (
 
 } else if (recentlyViewedSlider) {
 
-    recentlyViewedSlider.parentElement.parentElement.style.display = "none";
+    recentlyViewedSlider.closest(".product-slider").style.display = "none";
 
 }

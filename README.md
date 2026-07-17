@@ -30,8 +30,7 @@ Built entirely with **HTML, CSS, and JavaScript**, the project focuses on respon
 
 # 🌐 Live Demo
 
-🚀 **Coming Soon**
-
+https://amazon-india-clone-two.vercel.app
 ---
 
 # 📑 Table of Contents
