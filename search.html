@@ -13,86 +13,57 @@
 
 <body>
     <div id="navbar-container"></div>
-
     <main class="search-page">
-
         <aside class="search-sidebar">
-
             <h2>Filters</h2>
-
-            <div class="filter-group">
-
-                <h3>Department</h3>
-
+            <fieldset class="filter-group">
+                <legend>Department</legend>
                 <label>
                     <input type="checkbox" value="Laptop" class="category-filter">
                     Laptop
                 </label>
-
                 <label>
                     <input type="checkbox" value="Accessory" class="category-filter">
                     Accessory
                 </label>
-
-            </div>
-
-            <div class="filter-group">
-
-                <h3>Price</h3>
-
+            </fieldset>
+            <fieldset class="filter-group">
+                <legend>Price</legend>
                 <label>
                     <input type="radio" name="price" value="100">
                     Under $100
                 </label>
-
                 <label>
                     <input type="radio" name="price" value="500">
                     $100 - $500
                 </label>
-
                 <label>
                     <input type="radio" name="price" value="1000">
                     Above $500
                 </label>
-
-            </div>
-
+            </fieldset>
         </aside>
-
         <section class="results-section">
-
-            <div class="search-header">
-
+            <header class="search-header">
                 <h1 id="searchTitle"></h1>
-
-                <select id="sortSelect">
-
+                <select id="sortSelect" aria-label="Sort search results">
                     <option value="featured">
                         Featured
                     </option>
-
                     <option value="low-high">
                         Price: Low to High
                     </option>
-
                     <option value="high-low">
                         Price: High to Low
                     </option>
-
                     <option value="rating">
                         Highest Rated
                     </option>
-
                 </select>
-
-            </div>
-
+            </header>
             <div id="searchResults"></div>
-
         </section>
-
     </main>
-
     <div id="footer-container"></div>
 
     <script src="js/products.js"></script>
