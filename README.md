@@ -41,7 +41,7 @@ A fully responsive e-commerce frontend built with **HTML5**, **CSS3**, and **Van
 
 <div align="center">
 
-<a href="assets/demo/demo.mp4">
+<a href="https://github.com/jiviteshgoyal07/amazon-clone-jg/raw/refs/heads/main/assets/demo/demo.mp4">
   <img
     src="assets/demo/demo-thumbnail.png"
     alt="Watch Amazon Clone Project Demo"
