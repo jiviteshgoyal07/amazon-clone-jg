@@ -1,3 +1,8 @@
+<p align="center">
+  <img src="assets/branding/project-banner.png"
+       alt="Amazon Clone - Modern E-Commerce Frontend"
+       width="100%">
+</p>
 <div align="center">
 
 # 🛒 Amazon Clone
