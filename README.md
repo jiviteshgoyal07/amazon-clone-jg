@@ -1,212 +1,241 @@
 <div align="center">
 
-# 🛒 Amazon Clone – Multi-Page E-Commerce Frontend
+# 🛒 Amazon Clone
 
-A modern **Amazon-inspired multi-page e-commerce frontend** built using **HTML5, CSS3, and JavaScript**.
+### Modern Amazon-Inspired Multi-Page E-Commerce Frontend
 
-<p>
+A fully responsive e-commerce frontend built with **HTML5**, **CSS3**, and **Vanilla JavaScript**, featuring a complete client-side shopping experience with persistent browser storage.
 
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-ES6-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-![Responsive](https://img.shields.io/badge/Responsive-Yes-success?style=for-the-badge)
-![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)
+<p align="center">
+
+<img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white"/>
+<img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white"/>
+<img src="https://img.shields.io/badge/JavaScript-ES6-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"/>
+<img src="https://img.shields.io/badge/Responsive-Design-success?style=for-the-badge"/>
+<img src="https://img.shields.io/badge/LocalStorage-Persistent_Data-blue?style=for-the-badge"/>
+<img src="https://img.shields.io/badge/Deployment-Vercel-black?style=for-the-badge&logo=vercel"/>
+<img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge"/>
 
 </p>
+
+### 🚀 Live Demo
+
+**https://amazon-clone-jg.vercel.app**
+
+### 💻 GitHub Repository
+
+**https://github.com/jiviteshgoyal07/amazon-clone-jg**
+
+⭐ **If you like this project, consider giving the repository a star!**
 
 </div>
 
 ---
 
-## 📖 About
+# 🎥 Project Demo
 
-This project recreates the experience of a modern e-commerce website with a clean, responsive interface and interactive frontend features.
+<div align="center">
 
-Built entirely with **HTML, CSS, and JavaScript**, the project focuses on responsive layouts, modular JavaScript architecture, reusable UI components, and client-side state management using the **LocalStorage API**.
+<a href="assets/demo/demo.mp4">
+  <img
+    src="assets/demo/demo-thumbnail.png"
+    alt="Watch Amazon Clone Project Demo"
+    width="100%"
+  >
+</a>
 
-> **Disclaimer:** This project is created solely for educational and portfolio purposes. It is an independent frontend implementation inspired by the user experience of Amazon and is **not affiliated with, endorsed by, or associated with Amazon**.
+### ▶ Click the image above to watch the full project demo
 
----
+Experience the complete shopping flow — from product discovery and search to cart, wishlist, checkout, and order history.
 
-# 🌐 Live Demo
-
-https://amazon-india-clone-two.vercel.app
----
-
-# 📑 Table of Contents
-
-- [Features](#-features)
-- [Tech Stack](#-tech-stack)
-- [Project Structure](#-project-structure)
-- [Getting Started](#-getting-started)
-- [Preview](#-preview)
-- [What I Learned](#-what-i-learned)
-- [Future Improvements](#-future-improvements)
-- [Contributing](#-contributing)
-- [License](#-license)
-- [Author](#-author)
+</div>
 
 ---
 
-# 🚀 Key Highlights
+# 📖 About the Project
 
-- 📱 Fully Responsive Design
-- 🛒 Multi-Page Shopping Experience
-- ❤️ Wishlist Functionality
-- 🛍️ Shopping Cart
-- 🔍 Product Search
-- 📦 Product Details Page
-- 💳 Checkout Flow
-- 📜 Orders Page
-- 🔔 Reusable Toast Notification System
-- 💾 LocalStorage Persistence
-- ⚡ Modular JavaScript Architecture
+**Amazon Clone** is a fully responsive, multi-page e-commerce frontend inspired by the shopping experience of Amazon and developed using **HTML5, CSS3, and Vanilla JavaScript**.
+
+Rather than recreating only a landing page, the project simulates a complete client-side shopping experience with interconnected pages, dynamic product rendering, search, product details, cart and wishlist management, checkout, order history, recently viewed products, reusable UI components, and persistent data using the **LocalStorage API**.
+
+The project was built to strengthen practical frontend development skills while focusing on maintainable code, modular JavaScript, responsive layouts, reusable components, and a consistent user experience.
 
 ---
 
-# 📸 Preview
+# ✨ Key Features
 
-Project screenshots will be added after deployment.
+### 🏠 Home & Product Discovery
 
-### 🏠 Home Page
+- Responsive Amazon-inspired navigation
+- Hero image slider
+- Product categories and promotional sections
+- Product carousels
+- Recently viewed products
+- Responsive layouts across screen sizes
 
-*Coming Soon*
+### 📦 Product Experience
 
-### 📦 Product Page
+- Dynamic product detail pages
+- Product image gallery
+- Pricing and product information
+- Related products
+- Add to Cart
+- Add to Wishlist
 
-*Coming Soon*
+### 🔍 Search
 
-### 🔍 Search Page
+- Live search suggestions
+- Dynamic search results
+- Product filtering
+- Fast client-side search experience
 
-*Coming Soon*
+### 🛒 Cart & Wishlist
 
-### 🛒 Shopping Cart
+- Add and remove products
+- Quantity management
+- Dynamic subtotal calculation
+- Save products for later
+- Persistent cart and wishlist
+- Dynamic cart and wishlist counters
 
-*Coming Soon*
+### 💳 Checkout & Orders
 
-### ❤️ Wishlist
+- Delivery method selection
+- Dynamic order summary
+- Checkout workflow
+- Order confirmation page
+- Persistent order history
+- Buy Again functionality
 
-*Coming Soon*
+### 🎨 User Experience
 
-### 💳 Checkout
-
-*Coming Soon*
-
-### 📜 Orders
-
-*Coming Soon*
+- Reusable navbar and footer
+- Toast notifications
+- Interactive product cards
+- Consistent design language
+- Persistent shopping data
+- Responsive desktop, tablet, and mobile layouts
 
 ---
 
-# ✨ Features
+# 📸 Project Preview
 
-## 🏠 Home
+<div align="center">
 
-- Responsive homepage
-- Hero banner
-- Product category cards
-- Product recommendation sections
-- Recently Viewed products
-- Reusable navigation and footer
+## 🏠 Home Page
+
+<img src="assets/screenshots/home.png" width="100%" alt="Amazon Clone Home Page">
 
 ---
 
 ## 📦 Product Page
 
-- Product image gallery
-- Thumbnail image switching
-- Image zoom on hover
-- Product information
-- Customer reviews
-- Related products
-- Quantity selector
-- Add to Cart
-- Add to Wishlist
+<img src="assets/screenshots/product.png" width="100%" alt="Amazon Clone Product Page">
 
 ---
 
-## 🔍 Search
+## 🔍 Search Results
 
-- Keyword search
-- Dynamic search results
-- Product sorting
-- Quick Add to Cart
+<img src="assets/screenshots/search.png" width="100%" alt="Amazon Clone Search Results">
 
 ---
 
 ## 🛒 Shopping Cart
 
-- Add products
-- Remove products
-- Update quantity
-- Save for later
-- Dynamic subtotal calculation
-- Persistent cart using LocalStorage
+<img src="assets/screenshots/cart.png" width="100%" alt="Amazon Clone Shopping Cart">
 
 ---
 
 ## ❤️ Wishlist
 
-- Save favorite products
-- Remove products
-- Persistent wishlist
-- Quick product navigation
+<img src="assets/screenshots/wishlist.png" width="100%" alt="Amazon Clone Wishlist">
 
 ---
 
 ## 💳 Checkout
 
-- Delivery options
-- Shipping cost calculation
-- Order review
-- Order summary
-- Place Order
+<img src="assets/screenshots/checkout.png" width="100%" alt="Amazon Clone Checkout">
 
 ---
 
-## 📜 Orders
+## ✅ Order Success
 
-- Order history
-- Buy Again
-- View Product
-- Persistent order history
+<img src="assets/screenshots/success.png" width="100%" alt="Amazon Clone Order Success">
 
 ---
 
-## 🎨 User Experience
+## 📜 Order History
 
-- Responsive layouts
-- Smooth hover animations
-- Product image zoom
-- Toast notification system
-- Modern UI
-- Consistent spacing
-- Clean typography
-- Mobile-friendly design
+<img src="assets/screenshots/orders.png" width="100%" alt="Amazon Clone Order History">
+
+</div>
 
 ---
 
 # 🛠 Tech Stack
 
 | Technology | Purpose |
-|------------|---------|
-| HTML5 | Structure |
-| CSS3 | Styling |
-| JavaScript (ES6) | Functionality |
-| LocalStorage API | Client-side persistence |
-| Font Awesome | Icons |
+|---|---|
+| HTML5 | Semantic page structure |
+| CSS3 | Styling, Flexbox, Grid & responsive layouts |
+| JavaScript (ES6) | Application logic and dynamic rendering |
+| LocalStorage API | Persistent cart, wishlist, orders & recently viewed data |
+| Font Awesome | Interface icons |
+| Git | Version control |
+| GitHub | Source code hosting |
+| Vercel | Deployment |
+
+---
+
+# 🧩 Architecture & Data Persistence
+
+The project separates shared functionality from page-specific logic to keep the codebase organized and maintainable.
+
+```text
+User
+ │
+ ▼
+HTML Pages
+ │
+ ▼
+Reusable Components
+Navbar • Footer
+ │
+ ▼
+Page-Specific JavaScript
+Home • Product • Search • Cart
+Wishlist • Checkout • Orders • Success
+ │
+ ▼
+Shared Utilities & Product Data
+common.js • utils.js • products.js
+ │
+ ▼
+LocalStorage API
+Cart • Wishlist • Orders • Recently Viewed
+```
+
+Shared components reduce duplicated markup, while utility functions handle reusable functionality such as cart operations, product lookup, price formatting, toast notifications, and order helpers.
+
+The **LocalStorage API** provides lightweight client-side persistence, allowing the cart, wishlist, orders, and recently viewed products to remain available after page refreshes without requiring a backend.
 
 ---
 
 # 📂 Project Structure
 
 ```text
-amazon-clone/
+amazon-clone-jg/
 │
 ├── assets/
-│   ├── images/
+│   ├── banners/
+│   ├── carousel/
+│   ├── categories/
+│   ├── demo/
+│   │   ├── demo-thumbnail.png
+│   │   └── demo.mp4
+│   ├── icons/
 │   ├── products/
-│   └── icons/
+│   └── screenshots/
 │
 ├── components/
 │   ├── navbar.html
@@ -216,12 +245,10 @@ amazon-clone/
 │   ├── common.css
 │   ├── home.css
 │   ├── product.css
-│   ├── search.css
 │   ├── cart.css
 │   ├── checkout.css
 │   ├── orders.css
-│   ├── wishlist.css
-│   └── success.css
+│   └── search.css
 │
 ├── js/
 │   ├── common.js
@@ -229,100 +256,138 @@ amazon-clone/
 │   ├── products.js
 │   ├── home.js
 │   ├── product.js
-│   ├── search.js
 │   ├── cart.js
+│   ├── wishlist.js
 │   ├── checkout.js
 │   ├── orders.js
-│   └── wishlist.js
+│   └── success.js
 │
 ├── index.html
 ├── product.html
 ├── search.html
 ├── cart.html
+├── wishlist.html
 ├── checkout.html
 ├── orders.html
-├── wishlist.html
 ├── success.html
-│
+├── LICENSE
 └── README.md
 ```
 
 ---
 
-# 🚀 Getting Started
+# ⚙️ Installation & Usage
 
-## Prerequisites
-
-- Modern Web Browser
-- Git (optional)
-
----
-
-### Clone the repository
+Clone the repository:
 
 ```bash
-git clone https://github.com/jiviteshgoyal07/amazon-india-clone.git
+git clone https://github.com/jiviteshgoyal07/amazon-clone-jg.git
 ```
 
-### Navigate to the project
+Move into the project directory:
 
 ```bash
-cd amazon-india-clone
+cd amazon-clone-jg
 ```
 
-### Open the project
+Open the project in **VS Code**.
 
-Open **index.html** in your preferred browser.
+You can then:
 
----
+- Right-click `index.html`
+- Select **Open with Live Server**
 
-# 💡 What I Learned
+Or open `index.html` directly in your browser.
 
-Building this project strengthened my understanding of:
+### Try the Complete Shopping Flow
 
-- Semantic HTML
-- Responsive Web Design
-- CSS Flexbox
-- CSS Grid
-- JavaScript DOM Manipulation
-- Event Handling
-- LocalStorage API
-- Modular JavaScript
-- Reusable Components
-- Frontend Project Architecture
-- Code Organization
-- Performance Optimization
-- Building a Complete Multi-Page Frontend Application
+1. Browse products from the homepage.
+2. Search for a product.
+3. Open a product detail page.
+4. Add products to your cart or wishlist.
+5. Change quantities or save products for later.
+6. Proceed through checkout.
+7. Place an order and view the confirmation page.
+8. Open order history and use **Buy Again**.
+9. Refresh the browser to see LocalStorage persistence in action.
 
 ---
 
-# 📈 Future Improvements
+# 🧪 Challenges & What I Learned
+
+Building this project involved solving practical frontend challenges such as:
+
+- Organizing a multi-page application
+- Managing shopping state across different pages
+- Synchronizing LocalStorage data
+- Dynamically rendering products
+- Implementing product search
+- Creating reusable components
+- Building responsive layouts
+- Debugging DOM-related behavior
+- Maintaining an organized project structure
+
+Through the project, I strengthened my understanding of:
+
+- Semantic HTML and page organization
+- CSS Flexbox, Grid, media queries, and responsive design
+- JavaScript DOM manipulation and event handling
+- Arrays, objects, ES6 features, and dynamic rendering
+- LocalStorage and client-side state management
+- Reusable frontend components
+- Multi-page frontend architecture
+- Git and GitHub workflow
+- Deployment with Vercel
+- Debugging and problem-solving in a larger frontend project
+
+---
+
+# 🗺 Roadmap
+
+The current version is a stable frontend implementation.
 
 Possible future enhancements include:
 
-- Backend Integration
-- User Authentication
-- Payment Gateway
-- Product API
-- User Profiles
-- Order Tracking
-- Product Filtering
-- Product Recommendations
-- Dark Mode
-- Recently Searched Products
+- [ ] Backend integration
+- [ ] User authentication
+- [ ] Database integration
+- [ ] REST API
+- [ ] Payment gateway integration
+- [ ] Product reviews and ratings
+- [ ] Advanced product filters and sorting
+- [ ] Order tracking
+- [ ] User profiles
+- [ ] Product recommendations
+- [ ] Dark mode
+- [ ] Admin dashboard
 
 ---
 
 # 🤝 Contributing
 
-Contributions are welcome!
+Contributions, suggestions, and improvements are welcome.
 
-If you'd like to improve this project:
+1. Fork the repository.
 
-1. Fork the repository
-2. Create a feature branch
-3. Commit your changes
-4. Open a Pull Request
+2. Create a feature branch:
+
+```bash
+git checkout -b feature/amazing-feature
+```
+
+3. Commit your changes:
+
+```bash
+git commit -m "Add amazing feature"
+```
+
+4. Push the branch:
+
+```bash
+git push origin feature/amazing-feature
+```
+
+5. Open a Pull Request.
 
 ---
 
@@ -332,22 +397,51 @@ This project is licensed under the **MIT License**.
 
 ---
 
+# ⚠️ Disclaimer
+
+This project was developed solely for **educational and portfolio purposes**.
+
+It is an independent frontend implementation inspired by the shopping experience of Amazon and is **not affiliated with, endorsed by, sponsored by, or associated with Amazon**.
+
+All trademarks and brand names belong to their respective owners.
+
+---
+
 # 👨‍💻 Author
 
-**Jivitesh Goyal**
+<div align="center">
+
+## Jivitesh Goyal
 
 Computer Science Engineering Student
 
-- GitHub: https://github.com/jiviteshgoyal07
+Interested in **Frontend Development, UI Engineering, and building modern web applications**.
+
+### Connect
+
+**GitHub:** https://github.com/jiviteshgoyal07
+
+</div>
+
+---
+
+# 🙏 Acknowledgements
+
+Helpful learning and reference resources used during development include:
+
+- MDN Web Docs
+- Font Awesome
+- Git Documentation
+- GitHub Documentation
+- Vercel Documentation
+- The open-source developer community
 
 ---
 
 <div align="center">
 
-### ⭐ If you enjoyed this project, consider giving it a star!
+### ⭐ If you found this project useful, consider starring the repository.
 
-It helps others discover the project and motivates me to build more.
-
-Thank you for visiting! ❤️
+Made with ❤️ using **HTML, CSS & JavaScript**
 
 </div>
